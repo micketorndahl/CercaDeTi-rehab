@@ -1,0 +1,26 @@
+/*
+/* STANDARD
+*/
+
+body {
+  font-family: lato, sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+.main p {
+  font-family: pontano-sans, sans-serif;
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+  text-align: center;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fas {
+  font-size: 3rem;
+  color: red;
+}

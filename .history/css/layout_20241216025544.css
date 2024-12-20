@@ -1,0 +1,62 @@
+/*
+/* LAYOUT
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  margin: 0 auto;
+  outline: thin solid red;
+}
+
+.carousel {
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/banner.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 2rem;
+}
+
+.logo img {
+  width: 200px;
+  height: 200px;
+}
+
+nav.main ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav.main ul li {
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1rem;
+}
+
+section.main {
+  background: var(--dimwhite);
+}
+
+aside.sidebar-left {
+  background: var(--color-primary);
+}
+
+aside.sidebar-right {
+  background: var(--color-secondary);
+}

@@ -1,0 +1,20 @@
+/*
+/* VARIABLES */
+/*
+*/
+
+:root {
+  --color-primary: hsl(218, 94.5%, 78.4%);
+  --color-secondary: rgba(255, 148, 101, 1);
+  --text-light: rgb(244, 244, 244);
+  --text-dark: #3f4a49;
+  --dimwhite: #eee;
+  --white: #fff;
+  --dark: #222;
+  --darkgray: #a9a9a9;
+  --footarea1: #aabbcc;
+  --footarea2: #bbccdd;
+  --footarea3: #c#A9A9A9cddee;
+  --headcolor: hsl(29, 70%, 34%);
+  --hovercolor: rgba(0, 0, 0, 0.06);
+}

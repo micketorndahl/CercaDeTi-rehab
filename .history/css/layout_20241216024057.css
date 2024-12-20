@@ -1,0 +1,44 @@
+/*
+/* LAYOUT
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  margin: 0 auto;
+  outline: thin solid red;
+}
+
+.carousel {
+  width: 100%;
+}
+
+header.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 300px;
+  height: 300px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1rem;
+}
+
+section.main {
+  background: var(--dimwhite);
+}
+
+aside.sidebar-left {
+  background: var(--color-primary);
+}
+
+aside.sidebar-right {
+  background: var(--color-secondary);
+}

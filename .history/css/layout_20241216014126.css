@@ -1,0 +1,11 @@
+/*
+/* LAYOUT
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  margin: 0 auto;
+  outline: thin;
+}

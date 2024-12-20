@@ -1,0 +1,167 @@
+/*
+/* LAYOUT
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  outline: thin solid red;
+}
+
+header.main {
+  background: var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.logo-and-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline: thin solid red;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.nav-texts {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  align-items: center;
+}
+
+.cercadeti {
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+
+.location {
+  font-size: 1rem;
+  margin: 2rem;
+  color: var(--darkgray);
+}
+
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.main-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav.main-nav ul li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+nav.main-nav ul li a {
+  font-family: Pontano Sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+nav.main-nav ul li a:hover {
+  text-decoration: underline;
+  pointer: hand;
+}
+
+.nav-and-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-CTA {
+  background-color: rgba(255, 148, 101, 0.84);
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Pontano Sans, sans-serif;
+  outline: 0;
+  overflow: hidden;
+  pointer-events: auto;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.2s;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.button-CTA:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  background-image: url(../images/banner.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slogan {
+  font-size: 3rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1rem;
+}
+
+section.main {
+  background: var(--dimwhite);
+}
+
+aside.sidebar-left {
+  background: var(--color-primary);
+}
+
+aside.sidebar-right {
+  background: var(--color-secondary);
+}

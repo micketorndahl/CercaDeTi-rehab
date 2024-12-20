@@ -1,0 +1,26 @@
+/*
+/* FOOTER
+*/
+
+footer.main {
+  display: grid;
+  grid-template-areas: "footarea1 footarea2 footarea3";
+}
+
+footer .footarea1 {
+  grid-area: footarea1;
+  background: var(--foot1);
+  padding: 1rem;
+}
+
+footer .fooareat2 {
+  grid-area: footarea2;
+  background: var(--foot2);
+  padding: 1rem;
+}
+
+footer .footarea3 {
+  grid-area: footarea3;
+  background: var(--foot3);
+  padding: 1rem;
+}

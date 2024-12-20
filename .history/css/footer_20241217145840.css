@@ -1,0 +1,42 @@
+/*
+/* FOOTER
+*/
+
+footer.main {
+  display: grid;
+  grid-template-areas: "footarea1 footarea2 footarea3";
+  height: 400px;
+}
+
+footer .footer-shared {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+}
+
+footer .footarea1 {
+  grid-area: footarea1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footarea2 {
+  grid-area: footarea2;
+}
+
+footer .footarea3 {
+  grid-area: footarea3;
+}
+
+footer .footer-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-nav ul li {
+  list-style: none;
+  margin: 1rem;
+}

@@ -1,0 +1,76 @@
+/*
+/* LAYOUT
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  outline: thin solid red;
+}
+
+.carousel {
+  width: 100%;
+  height: 800px;
+  background-image: url(../images/banner.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 1rem;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+nav.main ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav.main ul li {
+  padding: 0.5rem;
+  list-style: none;
+  padding: 1.2rem;
+  width: 10rem;
+}
+
+nav.main ul li a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+nav.main ul li a:hover {
+  text-decoration: underline;
+  pointer: hand;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1rem;
+}
+
+section.main {
+  background: var(--dimwhite);
+}
+
+aside.sidebar-left {
+  background: var(--color-primary);
+}
+
+aside.sidebar-right {
+  background: var(--color-secondary);
+}

@@ -1,0 +1,24 @@
+/*
+/* VARIABLES */
+/*
+*/
+
+:root {
+  --color-primary: hsl(200, 100%, 40%);
+  --color-secondary: #ff7f50;
+  --color-tertiary: #7cb9e8;
+  --color-quaternary: hsl(200, 100%, 30%);
+  --color-five: rgb(255, 153, 0);
+  --text-light: rgb(244, 244, 244);
+  --text-dark: #3f4a49;
+  --dimwhite: #eee;
+  --white: #fff;
+  --black: #000;
+  --dark: #222;
+  --darkgray: #a9a9a9;
+  --footarea1: #aabbcc;
+  --footarea2: #bbccdd;
+  --footarea3: #a9a9a9;
+  --headcolor: hsl(29, 70%, 34%);
+  --hovercolor: rgba(0, 0, 0, 0.06);
+}

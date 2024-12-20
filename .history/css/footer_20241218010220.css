@@ -1,0 +1,121 @@
+/*
+/* FOOTER
+*/
+
+/* FOOTER */
+footer.main {
+  display: flex; /* Use flexbox */
+  justify-content: space-around; /* Even spacing for left and right */
+  background-color: var(--color-quaternary);
+}
+
+footer .footarea1,
+footer .footarea2,
+footer .footarea3 {
+  /* flex: 1;  */
+}
+
+footer .footarea1 {
+  background-color: var(--color-quaternary);
+  text-align: center;
+}
+
+footer .footarea2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer .footarea2 img {
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+footer .footarea3 {
+  text-align: center;
+}
+
+footer .footer-shared {
+}
+
+.footer-nav ul li {
+}
+
+.footer-nav ul li {
+  list-style: none;
+}
+
+.footer-nav ul li a {
+  font-family: Alata, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--black); /* Normal state color */
+  text-decoration: none;
+  text-transform: initial;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.footer-nav h3 {
+  text-align: center;
+}
+
+.social-footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.social-footer li {
+  margin: 0.5rem;
+}
+
+.address-shared {
+  font-size: 1rem;
+  padding: 0;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.address-se {
+}
+
+.adress-es {
+}
+
+.address-company-name {
+  font-family: Oswald, sans-serif;
+  font-size: 1.5rem;
+}
+
+.address-location {
+}
+
+.address-street {
+}
+
+.address-city {
+}
+
+.address-country {
+}
+
+.telephone {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+address a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+footer .footarea2 a {
+  color: var(--color-secondary);
+}
