@@ -85,12 +85,6 @@
   padding: 1rem 1.5rem;
 }
 
-.logo-and-text a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 h1.cercadeti {
   font-family: var(--font-eight), sans-serif;
   font-size: 1.8rem;
@@ -169,7 +163,7 @@ h1.cercadeti {
 }
 
 #banner-rehabilitering {
-  background-image: url(../images/banner-rehabilitering.jpg);
+  background-image: url(../images/banner-utbildning.jpg);
 }
 
 #banner-rehabprogram {

@@ -88,7 +88,6 @@
 .logo-and-text a {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 h1.cercadeti {
