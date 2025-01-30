@@ -1,0 +1,21 @@
+/*
+/* PAGE-TEMPLATES*/
+
+.container-kontakt {
+  height: 100%;
+}
+
+.details-container {
+  background-color: var(--background-color-white3);
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+}
+
+.contact-address {
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: normal;
+}

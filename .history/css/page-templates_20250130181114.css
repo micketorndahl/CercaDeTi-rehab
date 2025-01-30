@@ -1,0 +1,30 @@
+/*
+/* PAGE-TEMPLATES*/
+
+.container-kontakt {
+  margin: 0;
+  padding: 0;
+}
+
+.details-container {
+  background-color: var(--background-color-blue3);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 550%;
+  height: 100vh;
+  border-radius: 15% 0 0 0;
+}
+
+.details-container a {
+  color: var(--color-primary);
+}
+
+.contact-address {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+}

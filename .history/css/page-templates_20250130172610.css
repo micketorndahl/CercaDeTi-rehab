@@ -1,0 +1,15 @@
+/*
+/* PAGE-TEMPLATES*/
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-address {
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: normal;
+}

@@ -1,0 +1,15 @@
+/*
+/* PAGE-TEMPLATES*/
+
+.contact-container {
+  background-color: var(--background-color-white3);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.contact-address {
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: normal;
+}

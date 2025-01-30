@@ -1,0 +1,40 @@
+/*
+/* PAGE-TEMPLATES*/
+
+.container-kontakt {
+  margin: 0;
+  padding: 0;
+}
+
+.container-kontakt > h2 {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.details-container {
+  background-color: var(--background-color-blue3);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+}
+
+.details-container a {
+  color: var(--color-secondary);
+}
+
+.contact-address {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.contact-address-se {
+  margin-bottom: 1rem;
+}
