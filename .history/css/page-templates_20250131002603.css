@@ -1,0 +1,86 @@
+/*
+/* PAGE-TEMPLATES*/
+
+/* Template kontakt */
+
+.container-kontakt {
+  margin: 0;
+  padding: 0;
+}
+
+.details-container {
+  background-color: var(--background-color-blue3);
+  color: var(--white);
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+}
+
+.details-container > h2 {
+  font-size: calc(3rem + 1vw);
+  padding: 0;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.details-container a {
+  color: var(--white);
+}
+
+.addresses-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* This ensures that the sections take up equal space */
+  align-items: flex-start;
+  margin-top: 2rem;
+  width: 100%; /* Make sure the container takes up the full width */
+}
+
+.contact-address {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  text-align: left; /* Align text to the left for better readability */
+  line-height: 1.5; /* Ensure the lines don't appear too crowded */
+  word-wrap: break-word; /* Prevent overflow of long words */
+  width: 48%; /* Set both columns to have equal width */
+}
+
+.contact-address-se {
+  margin-bottom: 1rem;
+}
+
+.mailarea {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.details-container a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-container a:hover {
+  transform: scale(1.1);
+}
+
+.details-container a,
+.details-container a[href^="tel:"] {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-container a:hover,
+.details-container a[href^="tel:"]:hover {
+  transform: scale(1.1);
+}
+
+.map-container iframe {
+  width: 250px;
+  height: 200px;
+  border: 0;
+}

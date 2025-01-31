@@ -1,0 +1,107 @@
+/* NAV */
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+nav.main-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav ul li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+.main-nav a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.4s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--white);
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+nav.main-nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--white); /* Set default color to white */
+  transition: color 0.3s ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px; /* Adjust underline thickness as needed */
+    background-color: var(--accent-color); /* Use a defined accent color */
+    transition: width 0.4s ease-in-out;
+  }
+}
+
+nav.main-nav ul li a:hover,
+nav.main-nav ul li a.active {
+  color: var(--accent-color); /* Change color on hover and for active state */
+}
+
+nav.main-nav ul li a:hover:after,
+nav.main-nav ul li a.active:after {
+  width: 100%;
+}
+
+nav.main-nav ul li a.active:after {
+  width: 100%; /* Keep underline for active link */
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.social li {
+  margin: 0.5rem;
+}
+
+.ctas-container {
+  display: flex; /* Aligns buttons side by side */
+  justify-content: center;
+  align-items: center;
+}
