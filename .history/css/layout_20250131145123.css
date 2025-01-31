@@ -179,7 +179,7 @@ h1.cercadeti {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60%; /* Only darken the top part */
+  height: 70%; /* Only darken the top part */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
   z-index: 1;
 }

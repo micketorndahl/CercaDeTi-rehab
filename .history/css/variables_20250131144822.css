@@ -20,7 +20,7 @@
     var(--color-tertiary) 100%
   );
   --background-color-blue2: hsl(200, 100%, 30%);
-  --background-color-blue3: hsla(200, 62.3%, 47.8%, 0.8);
+  --background-color-blue3: hsla(200, 100%, 30%, 0.8);
   --background-color-white: hsla(0, 0%, 100%, 0.7);
   --color-primary: hsl(200, 100%, 40%);
   --color-secondary: #ff7f50;

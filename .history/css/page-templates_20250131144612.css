@@ -9,7 +9,7 @@
 }
 
 .details-container {
-  background-color: var(--background-color-blue3);
+  background-color: var(--background-color-white);
   color: var(--white);
   display: flex;
   justify-content: flex-start;
@@ -21,7 +21,7 @@
 }
 
 .details-container > h2 {
-  color: var(--white);
+  color: var(--dark);
   font-size: calc(3rem + 1vw);
   padding: 0;
   margin-top: 4rem;
@@ -29,7 +29,7 @@
 }
 
 .details-container a {
-  color: var(--white);
+  color: var(--dark);
 }
 
 .addresses-container {

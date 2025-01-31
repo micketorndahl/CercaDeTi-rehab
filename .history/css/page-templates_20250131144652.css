@@ -9,7 +9,7 @@
 }
 
 .details-container {
-  background-color: var(--background-color-blue3);
+  background-color: var(--background-color-white);
   color: var(--white);
   display: flex;
   justify-content: flex-start;
