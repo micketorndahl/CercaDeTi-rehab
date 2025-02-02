@@ -52,36 +52,8 @@
   margin-top: 117px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease-in-out;
-  max-width: 100%;
-  padding: 2vmax;
+  max-width: 50%;
 
-}
-
-.kontaktaoss-form-container h2 {
-  margin-top: 4vmax;
-  font-size: calc(2rem + 1vw);
-  margin-bottom: 1vmax;
-}
-
-.kontaktoss-form-container label {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: var(--darkgray2);
-}
-
-.kontaktaoss-form-container input, select, textarea {
-  margin-bottom: 15px;
-  border: 1px solid rgba(255, 255, 255,);
-  border-radius: var(--border-radius);
-  background: #fff;
-  color: var(--darkgray);
-  font-size: 14px;
-  outline: none;
-}
-
-.contact-form {
-  width: 80%;
-  margin: 0 auto;
 }
 
 .details-container {

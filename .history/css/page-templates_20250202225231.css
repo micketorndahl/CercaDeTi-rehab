@@ -70,6 +70,8 @@
 }
 
 .kontaktaoss-form-container input, select, textarea {
+  width: 50%;
+  padding: 10px;
   margin-bottom: 15px;
   border: 1px solid rgba(255, 255, 255,);
   border-radius: var(--border-radius);
@@ -77,11 +79,6 @@
   color: var(--darkgray);
   font-size: 14px;
   outline: none;
-}
-
-.contact-form {
-  width: 80%;
-  margin: 0 auto;
 }
 
 .details-container {

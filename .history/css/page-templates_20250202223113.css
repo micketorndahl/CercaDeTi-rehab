@@ -30,76 +30,37 @@
  display: flex;
   align-items: center; /* Align items vertically */
   justify-content: center;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
+  padding-top: 100px;
 }
 
-.banner-kontakt-content {
-  display: flex;
-  width: 100%;
-}
-
-.kontaktaoss-form-container,
-.details-container {
+.kontaktaoss-form-container{
   width: 50%;
-  height: auto;
-}
 
-.kontaktaoss-form-container {
-  background: rgba(255, 252, 252, 0.80); /* Adjust the opacity as needed */
-  margin-top: 117px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease-in-out;
-  max-width: 100%;
-  padding: 2vmax;
 
-}
-
-.kontaktaoss-form-container h2 {
-  margin-top: 4vmax;
-  font-size: calc(2rem + 1vw);
-  margin-bottom: 1vmax;
-}
-
-.kontaktoss-form-container label {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: var(--darkgray2);
-}
-
-.kontaktaoss-form-container input, select, textarea {
-  margin-bottom: 15px;
-  border: 1px solid rgba(255, 255, 255,);
-  border-radius: var(--border-radius);
-  background: #fff;
-  color: var(--darkgray);
-  font-size: 14px;
-  outline: none;
-}
-
-.contact-form {
-  width: 80%;
-  margin: 0 auto;
 }
 
 .details-container {
-  margin-top: 117px;
-  display: flex;
-  flex-direction: column;
   background-color: var(--background-color-blue3);
   color: var(--ghost-white);
+  display: flex;
+  justify-content: flex-start;
   text-align: center;
-  max-width: 50%;
-
+  align-self: flex-end;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
 }
 
 .details-container > h2 {
  color: var(--ghost-white);
   font-size: calc(3rem + 1vw);
   padding: 0;
-  margin-top: 4vmax;
+  margin-top: 4rem;
   margin-bottom: 1rem;
 }
 

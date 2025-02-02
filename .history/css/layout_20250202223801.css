@@ -287,7 +287,7 @@ aside h3 {
   color: var(--text-dark);
 }
 
-.register-container {
+.form-container {
   background: rgba(255, 252, 252, 0.80); /* Adjust the opacity as needed */
   margin-top: 12vmax;
   padding: 4vmax;
@@ -298,7 +298,7 @@ aside h3 {
   transition: transform 0.3s ease-in-out;
 }
 
-.register-container:hover {
+.form-container:hover {
   transform: translateY(-10px);
 
 }
