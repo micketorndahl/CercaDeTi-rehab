@@ -1,0 +1,418 @@
+/*
+/* PAGE-TEMPLATES*/
+
+/* Index Template */
+
+.container-index {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* Vertically center grid items */
+  justify-content: center; /* Horizontally align items */
+}
+
+.container-index h2 {
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-top: 8rem;
+}
+
+/* Template kontakt */
+
+.container-kontakt {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-kontakt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  padding-top: 100px;
+}
+
+.details-container {
+  background-color: var(--background-color-blue3);
+  color: var(--white);
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+}
+
+.details-container > h2 {
+  color: var(--white);
+  font-size: calc(3rem + 1vw);
+  padding: 0;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.details-container a {
+  color: var(--white);
+}
+
+.addresses-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide the container into two equal columns */
+  /* Add spacing between the address sections */
+}
+
+.contact-address {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  line-height: 1.3; /* Ensure the lines don't appear too crowded */
+  word-wrap: break-word; /* Prevent overflow of long words */
+}
+
+.contact-address-se,
+.contact-address-es {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+address h5 {
+  margin-bottom: 1rem;
+}
+
+.mailarea {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.phonearea {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.phonearea .telephone a {
+  text-decoration: underline;
+}
+
+.details-container a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-container a:hover {
+  transform: scale(1.1);
+}
+
+.details-container a,
+.details-container a[href^="tel:"] {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-container a:hover,
+.details-container a[href^="tel:"]:hover {
+  transform: scale(1.1);
+}
+
+.map-container {
+  margin-top: auto; /* Move the map to the bottom of its container */
+}
+
+.map-container iframe {
+  width: 50%;
+  border: 0;
+  border-radius: 50%;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(255, 255, 255, 0.2); /* Subtle white glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-container iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.4); /* Increased glow */
+}
+
+/* Template Rehabprogram */
+
+.container-rehabprogram {
+  display: flex;
+  justify-content: center;
+
+}
+
+.rehabprogram {
+  background-color: var(--white);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+}
+
+.rehabprogram > h2 {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  text-align: left;
+  white-space: pre-wrap;
+  padding-left: 3.5rem;
+}
+
+.rehabprogram p {
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  line-height: 1.6;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.banner-rehabprogram {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: top center;
+  padding-top: 100px;
+  width: 50%;
+}
+
+#banner-rehabprogram {
+  background-image: url(../images/individual-training21.jpg);
+}
+
+.banner-content-rehabprogram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Template Aktuellt */
+
+.scroll-down {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.scroll-down svg {
+    animation: bounce 2s infinite;
+    width: 90px; /* Large but elegant */
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5)); /* Soft, premium glow */
+}
+
+.scroll-down:hover svg {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8)); /* Brighter, clean glow */
+}
+
+
+.container-aktuellt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.container-aktuellt h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.aktuellt p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  pre-wrap: white-space;
+  margin: 1rem;
+}
+
+.main .latest-paragrafh {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  text-align: center;
+
+}
+
+.sidebar-right, .sidebar-left {
+  margin-top: 7rem;
+  padding: 0,
+  display: flex;
+  align-self: flex-start;
+
+}
+
+.sidebar-right #weather-widget {
+  background-color: #ffffff; /* White background */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-right h3, .sidebar-left h3 {
+
+}
+
+.sidebar-right #weather-widget {
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-right #weather-widget h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #007bff; /* Blue text */
+}
+
+.forecast-day {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Arial", sans-serif; /* Use a clean font */
+}
+
+.forecast-day h4 {
+  margin-bottom: 5px;
+  color: #333; /* Dark text */
+}
+
+.forecast-day .weather-icon {
+  padding: 1rem;
+  margin: 5px;
+}
+
+.forecast-day .weather-icon.yellow {
+  font-size: 36px; /* Adjust icon size */
+  color: #ffcc00; /* Yellow color for sunny icon */
+}
+
+.forecast-day .weather-icon.gray {
+  font-size: 36px; /* Adjust icon size */
+  color: #808080; /* Gray color for cloudy icon */
+}
+
+.forecast-day .weather-icon.blue {
+  font-size: 36px; /* Adjust icon size */
+  color: #00bfff; /* Blue color for rainy icon */
+}
+
+.forecast-day p {
+  text-align: center;
+  margin: 0;
+  color: #333; /* Dark text */
+}
+
+.image-gallery {
+    width: 100%;
+    margin: 50px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic columns */
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: opacity 1s ease-in-out, transform 2s ease-in-out;
+    opacity: 1;
+}
+
+/* Om Oss Template */
+
+.container-omoss {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* Vertically center grid items */
+  justify-content: center; /* Horizontally align items */
+
+}
+
+info-and-images-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.img-omoss {
+  width: 24px;
+  height: 24px;
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(255, 255, 255, 0.2); /* Subtle white glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.omoss > h2 {
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-top: 8rem;
+}
+
+.omoss {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content
+  width: 50%;
+
+
+}
+
+
+.omoss p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  white-space: pre-wrap;
+  text-align: center;
+  margin: 0.5rem;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
