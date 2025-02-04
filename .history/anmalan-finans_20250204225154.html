@@ -59,12 +59,12 @@
                 ></a>
               </li>
               <li>
-                <aa href="https://www.linkedin.com/company/cercadeti-rehab-ab" title="LinkedIn"
+                <a href="https://www.linkedin.com/company/cercadeti-rehab-ab"
                   ><i class="fab fa-linkedin-in icon"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.instagram.com/cercadetirehab/" title="Instagram"
+                <a href="https://www.instagram.com/cercadetirehab/"
                   ><i class="fab fa-instagram icon"></i
                 ></a>
               </li>
@@ -73,90 +73,107 @@
         </div>
       </header>
 
-      <!-- MAIN START -->
-      <main>
-        <div class="anmalan-form-container">
-          <div class="register-container">
-            <form class="register-form">
-              <h2>Anmälan</h2>
-
-              <label for="name">Namn</label>
-              <input type="text" id="name" name="name" required />
-
-              <label for="email">E-postadress</label>
-              <input type="email" id="email" name="email" required />
-
-              <label for="phone">Telefonnummer</label>
-              <input type="tel" id="phone" name="phone" required />
-
-              <label for="program">Välj ett Program</label>
-              <select id="program" name="program" required>
-                <option value="neurorehab">Neurorehab</option>
-                <option value="reumarehab">Reumarehab</option>
-                <option value="cancerrehab">Cancerrehab</option>
-                <option value="stressrehab">Stressrehab</option>
-                <option value="närståendeprogram">Närståendeprogram</option>
-              </select>
-
-              <label for="program"
-                >Vilken Rehabiliteringsperiod är du intresserad av?</label
-              >
-              <select id="period" name="period" title="Rehabiliteringsperiod" required>
-                <option value="april">5 – 26 April</option>
-                <option value="maj">10 – 31 Maj</option>
-                <option value="september">6 – 27 September</option>
-                <option value="oktober">4 – 25 Oktober</option>
-                <option value="november">1 – 22 November</option>
-              </select>
-
-              <label for="message">Meddelande</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-
-
-                  <div class="checkbox-container">
-                    <div class="checkbox-gdpr">
-                      <input type="checkbox" id="gdpr" name="gdpr" required />
-                      <label for="gdpr"
-                        >Godkännande om samtycke enligt lagen för GDPR</label
-                      >
-                    </div>
-
-                    <div class="checkbox-call">
-                      <input type="checkbox" id="call" name="call" />
-                      <label for="call">Jag vill helst bli uppringd</label>
-                    </div>
-
-                    <div class="checkbox-email">
-                      <input
-                        type="checkbox"
-                        id="emailContact"
-                        name="emailContact"
-                      />
-                      <label for="emailContact"
-                        >Jag vill bli kontaktad via e-post</label
-                      >
-                    </div>
-                  </div>
-
-              <p class="register-welcome">
-                Du är alltid välkommen att kontakta oss.
-              </p>
-              <p class="info-text">
-                Dina uppgifter hanteras enligt vår Integritetspolicy och
-                samtycke enligt GDPR när du sänder information till oss.
-              </p>
-
-              <button type="submit" class="submit-btn">Skicka</button>
-            </form>
+      <div class="banner" id="banner-anmalan-finans">
+        <div class="banner-content">
+          <h2 class="slogan">Anmälan / Finansiering</h2>
+          <div class="ctas-container">
+            <a href="anmalan-form.html" class="button-CTA">Anmälan</a>
+            <a href="#financing" class="button-CTA">Finansiering</a>
           </div>
         </div>
+      </div>
 
-          <div class="financing-container">
+      <main class="main">
+        <section class="anmalan-finans-container">
+          <h2 class="anmalan-heading">Anmälan till Rehabiliteringsprogram</h2>
+          <div class="anmalan-content">
+            <div class="register-container register-container-anmalan-finans">
+              <form class="register-form">
+                <h2>Anmälan</h2>
+
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">E-postadress</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" required />
+
+                <label for="program">Välj ett Program</label>
+                <select id="program" name="program" required>
+                  <option value="neurorehab">Neurorehab</option>
+                  <option value="reumarehab">Reumarehab</option>
+                  <option value="cancerrehab">Cancerrehab</option>
+                  <option value="stressrehab">Stressrehab</option>
+                  <option value="närståendeprogram">Närståendeprogram</option>
+                </select>
+
+                <label for="program"
+                  >Vilken Rehabiliteringsperiod är du intresserad av?</label
+                >
+                <select id="period" name="period" required>
+                  <option value="april">5 – 26 April</option>
+                  <option value="maj">10 – 31 Maj</option>
+                  <option value="september">6 – 27 September</option>
+                  <option value="oktober">4 – 25 Oktober</option>
+                  <option value="november">1 – 22 November</option>
+                </select>
+
+                <label for="message">Meddelande</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+
+                <div class="checkbox-container">
+                  <div class="checkbox-gdpr">
+                    <input type="checkbox" id="gdpr" name="gdpr" required />
+                    <label for="gdpr"
+                      >Godkännande om samtycke enligt lagen för GDPR</label
+                    >
+                  </div>
+
+                  <div class="checkbox-call">
+                    <input type="checkbox" id="call" name="call" />
+                    <label for="call">Jag vill helst bli uppringd</label>
+                  </div>
+
+                  <div class="checkbox-email">
+                    <input
+                      type="checkbox"
+                      id="emailContact"
+                      name="emailContact"
+                    />
+                    <label for="emailContact"
+                      >Jag vill bli kontaktad via e-post</label
+                    >
+                  </div>
+                </div>
+
+                <p class="register-welcome">
+                  Du är alltid välkommen att kontakta oss.
+                </p>
+                <p class="info-text">
+                  Dina uppgifter hanteras enligt vår Integritetspolicy och
+                  samtycke enligt GDPR när du sänder information till oss.
+                </p>
+
+                <button type="submit" class="submit-btn">Skicka</button>
+              </form>
+            </div>
+            <div class="image-container-anmalan">
+              <img
+                src="images/staff-with-client.jpg"
+                alt="staff-with-a-client"
+              />
+            </div>
+          </div>
+        </section>
+
+        <div class="financing-container">
           <section class="financing" id="financing">
             <div class="image-container-finance">
               <img src="images/individual-training2.jpg" alt="" />
@@ -175,8 +192,9 @@
                 alt="Medical-Finance-logo"
               />
             </div>
+          </section>
+        </div>
       </main>
-      <!-- MAIN END -->
       <!-- FOOTER START -->
       <footer class="footer-container">
         <div class="footer-top">
@@ -235,18 +253,18 @@
             <div class="social-footer">
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/CercadetiRehab/" title="Facebook">
+                  <a href="https://www.facebook.com/CercadetiRehab/">
                     <i class="fab fa-facebook-f icon"></i>
                   </a>
                 </li>
 
                 <li>
-                  <a href="https://www.linkedin.com/company/cercadeti-rehab-ab" title="LinkedIn"
+                  <a href="https://www.linkedin.com/company/cercadeti-rehab-ab"
                     ><i class="fab fa-linkedin-in icon"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/cercadetirehab/" title="Instagram"
+                  <a href="https://www.instagram.com/cercadetirehab/"
                     ><i class="fab fa-instagram icon"></i
                   ></a>
                 </li>

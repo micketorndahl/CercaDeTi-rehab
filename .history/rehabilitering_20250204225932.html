@@ -35,15 +35,11 @@
           <div class="nav-container">
             <ul>
               <li>
-                <a href="rehabilitering.html">Rehabilitering</a>
+                <a href="rehabilitering.html" class="active">Rehabilitering</a>
               </li>
               <li><a href="rehabprogram.html">Rehabprogram</a></li>
               <li><a href="aktuellt.html">Aktuellt</a></li>
-              <li>
-                <a href="anmalan-finans.html" class="active"
-                  >Anmälan / Finansiering</a
-                >
-              </li>
+              <li><a href="anmalan-finans.html">Anmälan / Finansiering</a></li>
               <li><a href="om-oss.html">Om oss</a></li>
               <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
@@ -54,17 +50,23 @@
           <div class="social">
             <ul>
               <li>
-                <aa href="https://www.facebook.com/CercadetiRehab/" title="Facebook"
+                <a
+                  href="https://www.facebook.com/CercadetiRehab/"
+                  title="Facebook"
                   ><i class="fab fa-facebook-f icon"></i
                 ></a>
               </li>
               <li>
-                <aa href="https://www.linkedin.com/company/cercadeti-rehab-ab" title="LinkedIn"
+                <a
+                  href="https://www.linkedin.com/company/cercadeti-rehab-ab"
+                  title="LinkedIn"
                   ><i class="fab fa-linkedin-in icon"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.instagram.com/cercadetirehab/" title="Instagram"
+                <a
+                  href="https://www.instagram.com/cercadetirehab/"
+                  title="Instagram"
                   ><i class="fab fa-instagram icon"></i
                 ></a>
               </li>
@@ -73,110 +75,30 @@
         </div>
       </header>
 
-      <!-- MAIN START -->
-      <main>
-        <div class="anmalan-form-container">
-          <div class="register-container">
-            <form class="register-form">
-              <h2>Anmälan</h2>
-
-              <label for="name">Namn</label>
-              <input type="text" id="name" name="name" required />
-
-              <label for="email">E-postadress</label>
-              <input type="email" id="email" name="email" required />
-
-              <label for="phone">Telefonnummer</label>
-              <input type="tel" id="phone" name="phone" required />
-
-              <label for="program">Välj ett Program</label>
-              <select id="program" name="program" required>
-                <option value="neurorehab">Neurorehab</option>
-                <option value="reumarehab">Reumarehab</option>
-                <option value="cancerrehab">Cancerrehab</option>
-                <option value="stressrehab">Stressrehab</option>
-                <option value="närståendeprogram">Närståendeprogram</option>
-              </select>
-
-              <label for="program"
-                >Vilken Rehabiliteringsperiod är du intresserad av?</label
-              >
-              <select id="period" name="period" title="Rehabiliteringsperiod" required>
-                <option value="april">5 – 26 April</option>
-                <option value="maj">10 – 31 Maj</option>
-                <option value="september">6 – 27 September</option>
-                <option value="oktober">4 – 25 Oktober</option>
-                <option value="november">1 – 22 November</option>
-              </select>
-
-              <label for="message">Meddelande</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-
-
-                  <div class="checkbox-container">
-                    <div class="checkbox-gdpr">
-                      <input type="checkbox" id="gdpr" name="gdpr" required />
-                      <label for="gdpr"
-                        >Godkännande om samtycke enligt lagen för GDPR</label
-                      >
-                    </div>
-
-                    <div class="checkbox-call">
-                      <input type="checkbox" id="call" name="call" />
-                      <label for="call">Jag vill helst bli uppringd</label>
-                    </div>
-
-                    <div class="checkbox-email">
-                      <input
-                        type="checkbox"
-                        id="emailContact"
-                        name="emailContact"
-                      />
-                      <label for="emailContact"
-                        >Jag vill bli kontaktad via e-post</label
-                      >
-                    </div>
-                  </div>
-
-              <p class="register-welcome">
-                Du är alltid välkommen att kontakta oss.
-              </p>
-              <p class="info-text">
-                Dina uppgifter hanteras enligt vår Integritetspolicy och
-                samtycke enligt GDPR när du sänder information till oss.
-              </p>
-
-              <button type="submit" class="submit-btn">Skicka</button>
-            </form>
+      <div class="banner" id="banner-rehabilitering">
+        <div class="banner-content">
+          <h2 class="slogan">Rehabilitering</h2>
+          <div class="ctas-container">
+            <a href="anmalan-finans.html" class="button-CTA">Anmälan</a>
+            <a href="#main" class="button-CTA">Läs mer</a>
           </div>
         </div>
+      </div>
 
-          <div class="financing-container">
-          <section class="financing" id="financing">
-            <div class="image-container-finance">
-              <img src="images/individual-training2.jpg" alt="" />
-            </div>
-            <div class="medical-finance">
-              <h2>Finansiering med Medical Finance</h2>
-              <p>
-                Vi samarbetar med Medical Finance som är ett av Sveriges ledande
-                finansbolag inom finansiering av vård. De erbjuder enkel och
-                säker finansiering med förmånliga och transparenta lånevillkor.
-                <a href="https://medicalfinance.se/">Läs mer här!</a>
-              </p>
-              <img
-                class="medical-finance-logo"
-                src="images/Medical-Finance-logo.png"
-                alt="Medical-Finance-logo"
-              />
-            </div>
-      </main>
-      <!-- MAIN END -->
+      <div class="content">
+        <section class="main" id="main">
+          <h2>Rehabilitering</h2>
+          <p>
+            Vi hjälper dig med neurologiska, reumatologiska, cancerrelaterade,
+            ortopediska och ödemsjukdomar samt smärt- och stressrelaterade
+            problem. Varje diagnos har ett särskilt rehabteam och program för
+            att ge bästa resultat. Närstående är välkomna att delta. CercaDeTi
+            Rehab har varit på plats i Calpe sedan 2012 och har många nöjda
+            deltagare.
+          </p>
+        </section>
+      </div>
+
       <!-- FOOTER START -->
       <footer class="footer-container">
         <div class="footer-top">
@@ -235,18 +157,18 @@
             <div class="social-footer">
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/CercadetiRehab/" title="Facebook">
+                  <a href="https://www.facebook.com/CercadetiRehab/">
                     <i class="fab fa-facebook-f icon"></i>
                   </a>
                 </li>
 
                 <li>
-                  <a href="https://www.linkedin.com/company/cercadeti-rehab-ab" title="LinkedIn"
+                  <a href="https://www.linkedin.com/company/cercadeti-rehab-ab"
                     ><i class="fab fa-linkedin-in icon"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/cercadetirehab/" title="Instagram"
+                  <a href="https://www.instagram.com/cercadetirehab/"
                     ><i class="fab fa-instagram icon"></i
                   ></a>
                 </li>
