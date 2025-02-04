@@ -1,0 +1,891 @@
+/*
+/* PAGE-TEMPLATES*/
+
+/* Index Template */
+
+.container-index {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Vertically center grid items */
+  justify-content: center; /* Horizontally align items */
+  padding-top: 6vmax;
+  padding-bottom: 6vmax;
+}
+
+.cercadeti-main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.cercadeti-main h2 {
+  font-size: 3rem;
+  color: var(--text-dark);
+}
+
+.content-60width {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2vmax;
+  margin-bottom: 6vmax;
+}
+
+/* Template kontakt */
+
+.container-kontakt {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-kontakt {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+.banner-kontakt-content {
+  display: flex;
+  width: 100%;
+}
+
+.kontaktaoss-form-container,
+.details-container {
+  width: 50%;
+  height: auto;
+}
+
+.kontaktaoss-form-container {
+  background: var(--background-color-blue3);
+  margin-top: 4vmax;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+  max-width: 50%;
+  padding: 2vmax;
+  height: 100vh - 117px;
+}
+
+.contact-form h2 {
+  color: var(--white);
+  margin-top: 4vmax;
+  font-size: calc(2rem + 1vw);
+  margin-bottom: 1vmax;
+}
+
+.kontaktoss-form-container label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: var(--white);
+}
+
+.contact-form input,
+select,
+textarea {
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: var(--border-radius);
+  background: var(--white);
+  color: var(--black);
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-form label,
+.contact-welcome,
+.contact-info {
+  color: var(--white);
+  padding-bottom: 1vmax;
+}
+
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--background-color-blue3);
+  color: var(--ghost-white);
+  text-align: center;
+  max-width: 50%;
+}
+
+.details-container > h2 {
+  color: var(--ghost-white);
+  font-size: calc(3rem + 1vw);
+  padding: 0;
+  margin-top: 4vmax;
+  margin-bottom: 1rem;
+}
+
+.details-container a {
+  color: var(--ghost-white);
+}
+
+.addresses-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide the container into two equal columns */
+  /* Add spacing between the address sections */
+}
+
+.contact-address {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  line-height: 1.3; /* Ensure the lines don't appear too crowded */
+  word-wrap: break-word; /* Prevent overflow of long words */
+}
+
+.contact-address-se,
+.contact-address-es {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+address h5 {
+  margin-bottom: 1rem;
+}
+
+.mailarea {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.phonearea {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.phonearea .telephone a {
+  text-decoration: underline;
+}
+
+.details-container a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-container a:hover {
+  transform: scale(1.1);
+}
+
+.details-container a,
+.details-container a[href^="tel:"] {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.details-container a:hover,
+.details-container a[href^="tel:"]:hover {
+  transform: scale(1.1);
+}
+
+.map-container {
+  margin-top: auto; /* Move the map to the bottom of its container */
+}
+
+.map-container iframe {
+  width: 50%;
+  border: 0;
+  border-radius: 50%;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(255, 255, 255, 0.2); /* Subtle white glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-container iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.4); /* Increased glow */
+}
+
+/* Template Rehabprogram */
+
+.container-rehabprogram {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rehabprogram-and-banner-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.rehabprogram {
+  background-color: var(--white);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  margin-top: 117px;
+  height: calc(100vh - 117px);
+}
+
+.rehabprogram > h2 {
+  font-size: 2.5rem;
+  text-align: left;
+  white-space: pre-wrap;
+  padding-left: 3.5rem;
+}
+
+.rehabprogram p {
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  line-height: 1.6;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.banner-rehabprogram {
+  position: relative;
+  width: 50%;
+  margin-top: 117px;
+  height: calc(100vh - 117px);
+  overflow: hidden;
+}
+
+/* Background Layers */
+.banner-rehabprogram div:not(.banner-content-rehabprogram) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Active background image */
+.banner-rehabprogram div.active {
+  opacity: 1;
+}
+
+/* Make sure the button stays on top */
+.banner-content-rehabprogram {
+  position: relative; /* Ensures it stays above absolute layers */
+  z-index: 2; /* Higher than background images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(
+    100vh - var(--header-height)
+  ); /* Adjusts to available screen space */
+}
+
+/* Background Images */
+.banner-rehabprogram .image1 {
+  background-image: url(../images/individual-training21.jpg);
+}
+.banner-rehabprogram .image2 {
+  background-image: url(../images/individual-training53.jpg);
+}
+.banner-rehabprogram .image3 {
+  background-image: url(../images/individual-training8.jpg);
+}
+.banner-rehabprogram .image4 {
+  background-image: url(../images/walking-rehab.jpg);
+}
+.banner-rehabprogram .image5 {
+  background-image: url(../images/individual-training34.jpg);
+}
+.banner-rehabprogram .image6 {
+  background-image: url(../images/pool-rehab.jpg);
+}
+
+/* Preload Images */
+@media (min-width: 1px) {
+  .preload-images {
+    background-image: url(../images/individual-training21.jpg),
+      url(../images/individual-training53.jpg),
+      url(../images/individual-training8.jpg), url(../images/walking-rehab.jpg),
+      url(../images/individual-training34.jpg), url(../images/pool-rehab.jpg);
+    display: none;
+  }
+}
+
+.programs-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vmax;
+}
+
+/* Template Aktuellt */
+
+.banner-aktuellt {
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  margin-top: 117px;
+  height: calc(100vh - 117px);
+}
+
+.banner-content-aktuellt {
+  position: relative;
+  z-index: 2; /* Ensures the text appears above the dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-aktuellt {
+  margin-top: 6vmax;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-aktuellt h2 {
+  font-size: 2.5rem;
+  text-align: left;
+  margin: 3vmax;
+}
+
+.aktuellt {
+  max-width: 60%;
+  padding-top: 6vmax;
+  padding-bottom: 12vmax;
+  margin-bottom: 20vmax;
+}
+
+.aktuellt p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+  pre-wrap: white-space;
+  margin: 3vmax;
+}
+
+.main .latest-paragrafh {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.dates {
+  min-width: 40%;
+  .card {
+    background-color: #e3f2fd;
+    border-radius: 2vmax;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4vmax;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    align-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    background-color: white;
+    padding: 1vmax 2vmax;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1vmax;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vmax;
+  }
+
+  li:hover {
+    background-color: var(--background-color-optional);
+  }
+
+  .label-tag {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 0.5vmax 1.5vmax;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+
+  .label-tag:hover {
+    background-color: #0056b3;
+  }
+}
+
+.dates-and-weather #weather-widget {
+  background-color: var(--background-color-light-bluegray2);
+  padding: 0.5vmax;
+  border-radius: 1vmax;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dates-and-weather #weather-widget h3 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #007bff; /* Blue text */
+}
+
+.forecast-day {
+  padding: 6vmax;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  z-index: 2;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  opacity: 0.8;
+
+  animation: changeBackground 20s infinite ease-in-out; /* Increased duration and added easing for smoother transition */
+  background-size: cover;
+  background-position: center center;
+  transition: background-image 8s ease-in-out; /* Smooth transition for background image */
+}
+
+.forecast-day::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Lighten up with semi-transparent white */
+  z-index: 1; /* Ensure the overlay is behind the text */
+  pointer-events: none; /* Allow interactions with underlying elements */
+}
+
+.forecast-day * {
+  position: relative;
+  z-index: 2; /* Ensure text and other content are above the overlay */
+}
+
+@keyframes changeBackground {
+  0%,
+  20% {
+    background-image: url(../images/calpe17.jpg);
+  }
+  20%,
+  40% {
+    background-image: url(../images/calpe7.jpg);
+  }
+  40%,
+  60% {
+    background-image: url(../images/calpe2.jpg);
+  }
+  60%,
+  80% {
+    background-image: url(../images/nature3.jpg);
+  }
+  80%,
+  90% {
+    background-image: url(../images/nature.jpg);
+  }
+  90%,
+  100% {
+    background-image: url(../images/badrulle5.jpg);
+  }
+}
+
+.forecast-day::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.forecast-day h4 {
+  font-size: 5vmax;
+  margin-bottom: 5px;
+  color: var(--white); /* Dark text */
+}
+
+.forecast-day .weather-icon {
+  padding: 4vmax;
+  margin: 5px;
+}
+
+.forecast-day .weather-icon.yellow {
+  font-size: 5vmax; /* Adjust icon size */
+  color: #ffcc00; /* Yellow color for sunny icon */
+}
+
+.forecast-day .weather-icon.gray {
+  font-size: 5vmax; /* Adjust icon size */
+  color: rgb(217, 217, 217); /* Gray color for cloudy icon */
+}
+
+.forecast-day .weather-icon.blue {
+  font-size: 5vmax; /* Adjust icon size */
+  color: #00bfff; /* Blue color for rainy icon */
+}
+
+.forecast-day p {
+  font-size: 2vmax;
+  text-align: center;
+  margin: 0;
+  color: var(--white); /* Dark text */
+}
+
+.forecast-day p, /* Use class selectors */
+.forecast-day h4,
+.forecast-day .weather-icon {
+  position: relative; /* Necessary for z-index to work */
+  z-index: 3;
+}
+
+.image-gallery {
+  padding: 12vmax;
+  background-color: var(--background-color-light-bluegray);
+  display: flex;
+  justify-content: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Dynamic columns */
+  gap: 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 1s ease-in-out, transform 2s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Om Oss Template */
+
+.container-omoss {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 6vmax;
+  margin: 4vmax;
+}
+
+.info-and-images-container {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  padding: 0;
+}
+
+.company-info {
+  padding: 2vmax;
+  background-color: var(--background-color-light-bluegray2);
+  width: 50%; /* Take up 50% of the screen */
+}
+
+.images-container {
+  width: 50%; /* Take up the other 50% of the screen */
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.images {
+  width: 100%; /* Take up 100% of the container's width */
+}
+
+.img-omoss {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the container without distortion */
+  transition: transform 0.3s ease-in-out;
+}
+
+.omoss {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 6vmax;
+}
+
+.omoss > h2 {
+  margin-top: 5vmax;
+  margin-bottom: 2vmax;
+  font-size: 4vmax;
+  text-align: left;
+  padding-left: 5vmax;
+}
+
+.omoss p {
+  font-size: 1.5vmax;
+  word-wrap: break-word;
+  line-height: 1.6;
+  text-align: left;
+  margin: 2vmax;
+}
+
+.company-guarantee {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: 20vmax;
+  position: relative;
+  padding-top: 6vmax;
+  background-color: #e0f7fa; /* Light gray-blueish background */
+  border-radius: 10px; /* Slightly rounded corners for a professional look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.quality,
+.privacy,
+.sustainability {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-guarantee h3 {
+  font-size: 1.5vmax;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.company-guarantee p {
+  font-size: 1.2vmax;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.personal {
+  background-color: var(--color-lightorange);
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Anmalan-Form */
+
+.anmalan-form-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 6vmax;
+  background-image: url(../images/excursion.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.register-container {
+  background: rgba(255, 252, 252, 0.8); /* Adjust the opacity as needed */
+  margin-top: 12vmax;
+  padding: 4vmax;
+  border-radius: 1vmax;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.register-container:hover {
+  transform: translateY(-10px);
+}
+
+.register-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+/* Anmalan-finans page layout with optional layout for the register form */
+
+/* Anmalan-finans page */
+.anmalan-finans-container {
+  background-color: var(--color-softskyblue);
+  max-width: 100vw; /* Prevents horizontal scrolling */
+  padding-top: 6vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anmalan-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2vmax;
+  color: var(--black);
+}
+
+.anmalan-content {
+  display: flex;
+  flex-direction: row; /* Ensures form and image are side by side */
+  width: 100%;
+  justify-content: center;
+}
+
+/* Ensure both elements take up equal width */
+.register-container-anmalan-finans,
+.image-container-anmalan {
+  flex: 1; /* Makes them take equal space */
+  display: flex;
+  flex-direction: column;
+  margin: 4vmax;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.register-container-anmalan-finans {
+  display: flex;
+  background-color: var(--background-color-optional);
+  margin: 4vmax;
+  border-radius: 0;
+  width: 50%;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: var(--darkgray2);
+}
+
+.register-container-anmalan-finans input,
+.register-container-anmalan-finans select,
+.register-container-anmalan-finans textarea {
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: var(--border-radius);
+  background: #fff;
+  color: var(--darkgray);
+  font-size: 14px;
+}
+
+.image-container-anmalan {
+  width: 50%;
+  display: flex;
+}
+
+/* Ensure image scales well */
+.image-container-anmalan img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.financing-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 6vmax;
+  padding-bottom: 6vmax;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 2vmax;
+}
+
+.financing {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.financing h2 {
+  font-size: 4vmax;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.financing p {
+  font-size: 1.5vmax;
+  margin-bottom: 20px;
+  color: var(--dakrgray);
+}
+
+.financing a {
+  display: block;
+  padding-top: 1vmax;
+}
+
+.medical-finance {
+  flex: 1; /* Takes up 50% of the space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.medical-finance h2,
+.medical-finance p {
+  text-align: center;
+}
+
+.medical-finance-logo {
+  width: 15vmax;
+  height: auto;
+  margin-top: 1vmax;
+}
+
+.image-container-finance {
+  flex: 1; /* Takes up 50% of the space */
+}
+.image-container-finance img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
