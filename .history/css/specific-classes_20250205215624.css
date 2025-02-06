@@ -1,0 +1,36 @@
+.wrapper-color1 {
+  background-color: var(--wrapper-color1);
+}
+
+.wrapper-color2 {
+  background-color: var(--wrapper-color2);
+}
+
+.wrapper-color3 {
+  background-color: var(--wrapper-color3);
+}
+
+.wrapper-color4 {
+  background-color: var(--wrapper-color4);
+}
+
+.wrapper-color5 {
+  background-color: var(--wrapper-color5);
+}
+
+.wrapper-color6 {
+  background-color: var(--wrapper-color6);
+}
+
+.wrapper-color7 {
+  background-color: var(--wrapper-color7);
+}
+
+.wrapper-color8 {
+  background-color: var(--wrapper-color8);
+}
+
+.padding-1 {
+  padding-top: 6.6rem;
+  padding-bottom: 6.6rem;
+}

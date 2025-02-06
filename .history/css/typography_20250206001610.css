@@ -1,0 +1,146 @@
+/*
+/* HEADLINES
+*/
+
+body {
+  background-color: hsla(var(--white-hsl), 1);
+  color: var(--gray-paragraph);
+  font-style: normal;
+}
+
+.container-index p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  white-space: pre-wrap;
+  text-align: center;
+  margin: 0.5rem;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+body,
+body p,
+.address-company-name,
+address span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary), sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: var(--body-font-line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: calc(5rem + 1vw);
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: hsla(var(--white-hsl), 1);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.09em;
+}
+h4 {
+  font-size: 1.2rem;
+  color: hsla(var(--white-hsl), 1);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.09em;
+}
+h5 {
+  font-size: 1.2rem;
+  font-style: normal;
+  padding: 0;
+}
+h6 {
+  font-size: 1rem;
+}
+
+.banner-content h2 {
+  font-family: var(--font-ten), sans-serif;
+  font-size: 6rem;
+  font-style: bold;
+  line-height: 1.2;
+  margin-top: 1vmax;
+  color: hsla(var(--white-hsl), 1);
+}
+
+header h3 {
+  display: flex;
+  justify-content: center;
+  color: hsla(var(--white-hsl), 1);
+  font-size: 1vmax;
+  text-align: center;
+  padding: 1vmax;
+}
+
+.card-index li {
+  color: hsla(var(--white-hsl), 1);
+}
+
+.address-company-name {
+  font-size: 1.4vmax;
+  font-weight: bold;
+  font-style: normal;
+}
+
+address span {
+  font-style: normal;
+  font-size: 1vmax;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.aktuellt p.important-paragraph {
+  font-size: 1.5vmax;
+  font-weight: 700;
+}
+
+.aktuellt p.latest-paragrafh {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--text-dark);
+}
+
+.omoss h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--text-gray);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2vmax;
+  width: 80%;
+}
+
+.omoss .company-info p {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 2vmax;
+  color: var(--text-gray);
+  word-break: break-word;
+  letter-spacing: 0.05em;
+}
+
+footer h3,
+footer h4 {
+  font-family: var(--font-eighteen), sans-serif;
+}
