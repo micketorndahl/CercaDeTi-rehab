@@ -1,0 +1,397 @@
+/*
+/* LAYOUT
+*/
+
+.site-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  background: linear-gradient(
+    135deg,
+    var(--color-quaternary) 25%,
+    var(--color-tertiary) 100%
+  );
+  background-size: 200% 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  animation: shineEffect 7s infinite linear;
+}
+
+.header > div {
+  flex: 1; /* Makes each section take up equal space */
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  position: relative;
+  animation: shineEffect 4s ease-in-out infinite;
+}
+
+@keyframes shineEffect {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px var(--background-color-blue);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 20px var(--background-color-light-blue);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px var(--background-color-blue);
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+
+.logo img {
+  width: 50px;
+  height: 85px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  padding: 0 1rem;
+}
+
+.logo img {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1) hue-rotate(0deg) saturate(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.1) hue-rotate(10deg) saturate(1.3);
+  }
+}
+
+.logo-and-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 1.5rem;
+}
+
+.logo-and-text a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-anmalan-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-height: 2rem;
+}
+
+h1.cercadeti {
+  font-family: var(--font-eight), sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ghost-white);
+  white-space: nowrap;
+}
+
+.ctas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-CTA {
+  background-color: var(--color-secondary);
+  padding: 1rem 2.6rem;
+  border-radius: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  font-family: Pontano Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 2rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+}
+
+/* First button: Transparent effect on hover */
+.button-CTA:nth-of-type(1) {
+  background-color: var(--color-primary);
+}
+
+.button-CTA:nth-of-type(1):hover {
+  background-color: rgba(32, 142, 179, 0.7);
+  color: white;
+  /* Use outline instead of border */
+  outline: 1px solid var(--color-primary); /* Or 2px as you prefer */
+  outline-offset: -1px; /* Adjust if needed to make outline appear as border */
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px;
+  transform: scale(1.05);
+}
+
+/* Second button: More vibrant on hover */
+.button-CTA:nth-of-type(2) {
+  background-color: var(--color-secondary);
+}
+
+.button-CTA:nth-of-type(2):hover {
+  background-color: #ff5722;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 6px 12px;
+  /* Scale on hover */
+  transform: scale(1.05); /* Adjust scale factor as desired */
+}
+
+.button-CTA:active {
+  transform: translateY(1px) scale(0.95); /* Scale down slightly on active */
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+}
+
+.social-anmalan-container .button-CTA {
+  background-color: #ff5722;
+  padding: 1rem;
+  border-radius: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  font-family: Pontano Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  transform-origin: center;
+}
+
+.banner {
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/banner-index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  margin-top: 117px;
+  height: calc(100vh - 117px);
+  animation: subtleMovement 30s infinite alternate ease-in-out;
+}
+
+@keyframes subtleMovement {
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center calc(50% + 10px);
+  }
+  100% {
+    background-position: center top;
+  }
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* Only darken the top part */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+#banner-aktuellt {
+  background-image: url(../images/banner-aktuellt.jpg);
+}
+
+#banner-anmalan-finans {
+  background-image: url(../images/banner-anmalan-finans.jpg);
+}
+
+#banner-om-oss {
+  background-image: url(../images/rehab11.jpg);
+  background-position: center center;
+}
+
+#banner-rehabilitering {
+  background-image: url(../images/banner-rehabilitering.jpg);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2; /* Ensures the text appears above the dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slogan {
+  padding: 5rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.content-3col {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Left Sidebar - Main Content - Right Sidebar */
+  grid-template-rows: auto; /* Allow content to dictate height */
+  grid-template-areas: "left main right"; /* Define named grid areas */
+}
+
+.main {
+  max-width: 100vw;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-main {
+  background-color: var(--color-lightorange);
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-main p {
+  color: var(--white);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+aside.sidebar-left {
+  grid-column: 1;
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+aside.sidebar-right {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensures vertical centering */
+}
+
+aside h3 {
+  color: var(--text-dark);
+  font-size: 1.5vmax;
+  margin-bottom: 2vmax;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: var(--border-radius);
+  background: #fff;
+  color: var(--black);
+  font-size: 14px;
+  outline: none;
+}
+
+.checkbox-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.register-welcome {
+  color: var(--black);
+  font-size: 1.5vmax;
+  margin-bottom: 0.2vmax;
+}
+
+.info-text {
+  color: var(--darkgray2);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  background-color: var(--color-primary);
+  color: var(--white);
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-secondary);
+}
+
+.divider {
+  position: relative;
+}
+
+.text-left {
+  flex-direction: row; /* Text left, Image right */
+}
+
+.text-right {
+  flex-direction: row-reverse; /* Image left, Text right */
+}
