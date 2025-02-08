@@ -29,9 +29,8 @@ footer .footarea1 {
 .footarea1 a,
 .footarea2 a {
   color: var(--white);
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.4s ease-in-out;
-  font-size: 1.2rem;
 }
 
 .footarea1 a:hover {
@@ -136,6 +135,10 @@ address a {
 
 .address-city {
   margin-bottom: 15px;
+}
+
+.footer-top .telephone a {
+  font-size: 1.2rem;
 }
 
 .image-container-footer {

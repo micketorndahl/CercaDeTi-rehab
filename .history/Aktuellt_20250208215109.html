@@ -12,13 +12,20 @@
     />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons-wind.min.css">
+
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="tailwind.css" />
     <title>CercaDeTi Rehab</title>
   </head>
+
+  <!-- BODY START -->
   <body>
     <div class="site-container">
+
+      <!-- HEADER START -->
       <header class="header">
         <div class="logo-wrapper">
           <div class="logo">
@@ -30,25 +37,26 @@
             </div>
           </div>
         </div>
-        <!-- NAVIGATION START -->
+
+        <!-- NAVIGATION START-->
         <nav class="main-nav">
           <div class="nav-container">
             <ul>
               <li><a href="rehabprogram.html">Rehabprogram</a></li>
-              <li><a href="aktuellt.html">Aktuellt</a></li>
+              <li><a href="aktuellt.html" class="active">Aktuellt</a></li>
               <li><a href="anmalan-finans.html">Anmälan / Finansiering</a></li>
-              <li><a href="om-oss.html" class="active">Om oss</a></li>
+              <li><a href="om-oss.html">Om oss</a></li>
               <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
           </div>
         </nav>
-        <!-- NAVIGATION END -->
-           <div class="nav-button-container">
+           <!-- NAVIGATION END -->
+        <div class="nav-button-container">
        <!-- ANMALAN button START -->
           <a href="anmalan-form.html" class="button-CTA">Anmälan</a>
         <!-- ANMALAN button END -->
         </div>
-        <!-- SOCIALS START -->
+        <!-- SOCIALS START-->
         <div class="social-container">
           <div class="social">
             <ul>
@@ -73,7 +81,7 @@
            <!-- DATES START -->
            <div class="dates-index">
             <div class="card-index">
-                <h3>Datum 2025</h3>
+                <h3>Datum rehab 2025</h3>
               <ul>
                 <li>5 – 26 April 2025 <a href="anmalan-form.html?period=april" class="label-tag">Anmäl</a></li>
                 <li>10 – 31 Maj 2025 <a href="anmalan-form.html?period=maj" class="label-tag">Anmäl</a></li>
@@ -84,159 +92,122 @@
             </div>
           </div>
             <!-- DATES END -->
+
         </div>
-        <!-- HEADER END -->
+
       </header>
+        <!-- HEADER END -->
 
       <!-- BANNER START -->
-      <div class="banner" id="banner-om-oss">
-        <div class="banner-content">
-          <h2 class="slogan">Om oss</h2>
+      <div class="banner-aktuellt" id="banner-aktuellt">
+        <div class="banner-content-aktuellt">
+          <h2 class="slogan">Aktuellt</h2>
           <div class="ctas-container">
-            <a href="#about" class="button-CTA">Bakgrund</a>
-            <a href="#personal" class="button-CTA">Personal</a>
+            <a href="#content" class="scroll-down" id="scroll-button" title="Scroll down to content">
+              <svg width="90" height="90" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 20C11.7 20 11.4 19.9 11.2 19.7L4.2 12.7C3.9 12.4 3.9 12 4.2 11.7L5.3 10.6C5.6 10.3 6 10.3 6.3 10.6L11 15.3V4C11 3.4 11.4 3 12 3H12.5C13.1 3 13.5 3.4 13.5 4V15.3L18.2 10.6C18.5 10.3 18.9 10.3 19.2 10.6L20.3 11.7C20.6 12 20.6 12.4 20.3 12.7L13.3 19.7C13.1 19.9 12.8 20 12.5 20H12Z" fill="white"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
+      <div class="banner-waves">
+  <div class="banner-waves-svg">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="hsl(200, 100%, 30%)" />  <stop offset="100%" stop-color="#7cb9e8" />  </linearGradient>
+      </defs>
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="url(#myGradient)" />
+    </svg>
+  </div>
+</div>
       <!-- BANNER END -->
 
-
       <!-- MAIN START -->
-      <main>
-        <div class="container-omoss"  id="about">
-          <section class="omoss"">
-            <div class="info-and-images-container text-left">
-              <div class="company-info">
+       <main id="content">
+        <section class="container-aktuellt">
+          <div class="aktuellt-and-dates">
+           <section class="aktuellt">
+          <h2>Aktuellt</h2>
+          <p class="latest-paragrafh">Nu är det inte långt kvar till årets rehabperioder. Vi ser väldigt mycket fram emot detta. </br>Välkomna!</p>
 
-                  <h2>CercaDeTi Rehab grundades i syfte att anordna rekreation på
-                  spanska fastlandet.</h2>
+        <p>Vi är glada att kunna meddela att vi nu tar emot anmälningar för våra rehabprogram för året 2025. Vårt team av erfarna terapeuter och specialister är redo att hjälpa dig på din väg till återhämtning och välmående. Vi erbjuder en rad olika program som är anpassade efter dina individuella behov och mål.</p>
+        <p>Under 2025 kommer vi att fokusera på att erbjuda ännu fler aktiviteter och behandlingar som främjar både fysisk och mental hälsa. Våra faciliteter är utrustade med den senaste teknologin och vi har ett brett utbud av tränings- och terapialternativ.</p>
+        <p>Vi ser fram emot att välkomna dig till våra moderna och trivsamma lokaler i Spanien. Tveka inte att kontakta oss för mer information eller för att boka din plats i ett av våra program. </p>
+  <p class="important-paragraph">Välkommen till CercaDeTi Rehab – din partner på vägen till ett bättre liv!</p>
 
-                  <p>Calpe den plats där vi startade är noga
-                  utvald. Här byggdes ett kontaktnät upp för att på bästa sätt
-                  ta hand om de svenskar som behövde rekreation.
-                  </p>
-
-
-                <p>
-                  År 2015 utvecklades CercaDeTi Rehab och inriktningen ändrades
-                  till rehabilitering med helhetssyn för personer med diagnos
-                  och skada. Målet är att alla med
-                  diagnos/skada ska få bästa möjlighet att leva fullt ut efter
-                  sin förmåga. I ledningen finns det egen erfarenhet av att leva
-                  med skada/diagnos och av att vara närstående.
-                </p>
-
-
-              </div>
-              <div class="images-container">
-                <div class="images">
-                  <img
-                    id="image-slider"
-                    src="images/local.jpg"
-                    alt="Company Image"
-                    class="img-omoss"
-                  />
-                </div>
-              </div>
-              </div>
-              <div class="info-and-images-container text-right wrapper-color5 padding-1">
-                   <div class="company-info"><p>
-                  Rehabteamet handplockades för att kunna möta varje patients
-                  behov. Att arbeta nära patienten blev och är ett ledord.
-                  Kvalitet i stället för kvantitet har resulterat i små grupper
-                  och individuella rehabplaner för varje deltagare. Vikten av en
-                  rehabilitering med helhetssyn, fysisk, mentalt och socialt är
-                  i fokus. Vi har fantastiska samarbetspartner som genom åren
-                  har gett oss det allra bästa av sin kunnskap.
-                </p>
-                </div>
-                   <div class="images-container">
-                <div class="images">
-                  <img
-                    id="image-slider"
-                    src="images/Evelyn-rob.jpg"
-                    alt="Company Image"
-                    class="img-omoss"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-           </div>
-
-          <section class="company-guarantee">
-            <div class="quality">
-            <h3>KVALITET</h3>
-            <p>
-              CerCaDeTi Rehab är registrerade hos IVO-inspektionen för vård och
-              omsorg. Varje yrkeskategori har den certifiering som krävs för
-              sitt yrkesutövande. Vi har licens att utför vård och rehabiliering
-              i Comunidad Valencia.
-            </p>
-            </div>
-
-            <div class="privacy">
-            <h3>PATIENTSKYDD</h3>
-            <p>
-              Dataskyddsförordningen (GDPR) är till för att skydda varje persons
-              grundläggande rättigheter och friheter, särskilt deras rätt till
-              skydd av personuppgifter.
-            </p>
-            </div>
-
-            <div class="sustainability">
-            <h3>HÅLLBARHET</h3>
-            <p>
-              CercaDeTi Rehabs program är uppbygda på en vetenskaplig grund.
-              Resultaten är mycket goda vilket gör att rehabilteringen leder
-              till bättre hälsa och blir kostnadseffektiv. Våra samarbetspartner
-              är erfarna och engagerade i varje patient.
-            </p>
-            </div>
-
-<div class="custom-shape-divider-bottom-1738628066">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-    </svg>
+         </section>
+        <aside class="dates">
+            <h3>Datum rehab 2025</h3>
+        <div class="card">
+    <ul>
+      <li>
+        5 – 26 April 2025
+        <a href="anmalan-form.html?period=april" class="label-tag">Anmäl</a>
+      </li>
+      <li>
+        10 – 31 Maj 2025
+        <a href="anmalan-form.html?period=maj" class="label-tag">Anmäl</a>
+      </li>
+      <li>
+        6 – 27 September 2025
+        <a href="anmalan-form.html?period=september" class="label-tag">Anmäl</a>
+      </li>
+      <li>
+        4 – 25 Oktober 2025
+        <a href="anmalan-form.html?period=oktober" class="label-tag">Anmäl</a>
+      </li>
+      <li>
+        1 – 22 November 2025
+        <a href="anmalan-form.html?period=november" class="label-tag">Anmäl</a>
+      </li>
+    </ul>
+  </div>
+        </aside>
 </div>
-          </section>
+
+<div class="aktuellt-image-container">
+  <figure class="figure">
+    <img src="/images/cercadeti-excursion.jpg" alt="Rehab i Evelyn's studio">
+    <figcaption class="figcaption">Utflykt i bergen med rehabdeltagarna</figcaption>
+  </figure>
+</div>
 
 
-<section class="personal">
+</section>
 
-          <h3>Personal</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, commodi
-            molestiae eligendi quae doloribus, id sequi, dolor a qui expedita
-            nobis ex consequuntur est laboriosam esse? Ex provident similique in
-            libero illum quos quam nemo eaque, vel rem omnis ipsam id aperiam
-            non deserunt labore dolore neque beatae ratione minima.
-          </p>
-          <h4>Heading 3</h4>
-          <p>
-            Magni voluptas accusamus adipisci, consequuntur earum dignissimos
-            quasi maiores minima tempora maxime id! Dolore, alias. Repudiandae
-            eveniet ex vel blanditiis earum dolorum quaerat sed? Porro voluptas
-            aliquid distinctio ratione laborum commodi vel, consequuntur fuga,
-            eos eveniet rem! Impedit quas inventore adipisci ex laboriosam
-            laborum assumenda delectus quidem reprehenderit! Porro, esse?
-          </p>
-          <h5>Heading 4</h5>
-          <p>
-            Laboriosam doloribus facere sint odit tenetur? Necessitatibus sed
-            quo saepe error qui enim illum placeat explicabo nisi nobis.
-            Officiis asperiores libero, voluptatibus placeat nobis eos,
-            consectetur illum nihil, deleniti rem molestias voluptate fugiat.
-            Quo quos eius, deserunt ducimus modi tempora voluptatem libero iure,
-            praesentium quod sit quibusdam dolor fugit debitis?
-          </p>
-       </section>
 
-        <!-- MAIN END -->
-      </main>
+<section class="weather">
+    <h3>Väder i Calpe</h3>
+          <div id="weather-widget"></div>
+</section>
 
-      <!-- FOOTER START -->
-      <footer class="footer-container">
+      <section class="image-gallery">
+
+          <div class="image-grid">
+              <div class="image-box"><img src="/images/rehab24.jpg" alt="rehab24"></div>
+              <div class="image-box"><img src="/images/individual-training17.jpg" alt="Placeholder image"></div>
+              <div class="image-box"><img src="/images/individual-training14.jpg" alt="individual-training14"></div>
+              <div class="image-box"><img src="/images/hand-cordination.jpg" alt="hand-cordination"></div>
+              <div class="image-box"><img src="/images/rehab20.jpg" alt="rehab220"></div>
+              <div class="image-box"><img src="/images/individual-training4.jpg" alt="individual-training4"></div>
+              <div class="image-box"><img src="/images/rehab7.jpg" alt="rehab7"></div>
+              <div class="image-box"><img src="/images/closeup-rehab5.jpg" alt="closeup-rehab5"></div>
+          </div>
+
+</>
+
+
+      </div>
+
+
+
+</main>
+<!-- MAIN END -->
+
+   <!-- FOOTER START -->
+    <footer class="footer-container">
         <div class="footer-top">
           <div class="footarea1 footer-shared">
 
@@ -266,10 +237,10 @@
         </div>
         <div class="footarea2 footer-shared">
 
-          <div class="footarea2-links">
-            <a href="anmalan-finans.html"><i class="fas fa-pencil-alt"></i> Anmälan</a>
-            <a href="mailto:info@cercadeti.se"><i class="fas fa-envelope"></i> info@cercadeti.se</a>
-          </div>
+                    <div class="footarea2-links">
+                  <a href="anmalan-finans.html"><i class="fas fa-pencil-alt"></i> Anmälan</a>
+                  <a href="mailto:info@cercadeti.se"><i class="fas fa-envelope"></i> info@cercadeti.se</a>
+</div>
           <div class="social-footer">
             <ul>
               <li>

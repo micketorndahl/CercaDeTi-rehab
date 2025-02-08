@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="tailwind.css" />
     <title>CercaDeTi Rehab</title>
   </head>
-
-  <!-- BODY START -->
   <body>
     <div class="site-container">
       <!-- HEADER START -->
@@ -33,16 +31,20 @@
             </div>
           </div>
         </div>
-
         <!-- NAVIGATION START -->
         <nav class="main-nav">
           <div class="nav-container">
             <ul>
-              <li><a href="rehabprogram.html">Rehabprogram</a></li>
+              <li>
+                <a href="rehabilitering.html">Rehabilitering</a>
+              </li>
+              <li>
+                <a href="rehabprogram.html" class="active">Rehabprogram</a>
+              </li>
               <li><a href="aktuellt.html">Aktuellt</a></li>
               <li><a href="anmalan-finans.html">Anmälan / Finansiering</a></li>
               <li><a href="om-oss.html">Om oss</a></li>
-              <li><a href="kontakt.html" class="active">Kontakt</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
           </div>
         </nav>
@@ -52,7 +54,6 @@
           <a href="anmalan-form.html" class="button-CTA">Anmälan</a>
           <!-- ANMALAN button END -->
         </div>
-
         <!-- SOCIALS START -->
         <div class="social-container">
           <div class="social">
@@ -80,11 +81,10 @@
               </li>
             </ul>
           </div>
-          <!-- SOCIALS END -->
           <!-- DATES START -->
           <div class="dates-index">
             <div class="card-index">
-              <h3>Datum 2025</h3>
+              <h3>Datum rehab 2025</h3>
               <ul>
                 <li>
                   5 – 26 April 2025
@@ -121,163 +121,89 @@
           </div>
           <!-- DATES END -->
         </div>
-        <!-- HEADER END -->
       </header>
 
       <!-- MAIN START -->
       <main>
-        <section class="container-kontakt">
-          <div class="kontakt-layout" id="kontakt-layout">
-            <div class="kontakt-layout-content" id="kontakt-layout">
-              <div class="kontaktaoss-form-container">
-                <form class="contact-form">
-                  <h2>Kontakta oss</h2>
+        <div class="container-rehabprogram">
+          <div class="rehabprogram-and-banner-container">
+            <section class="rehabprogram">
+              <h2>
+                CercaDeTi Rehab menar att det behövs ett helhetsperspektiv för
+                att uppnå bästa möjliga resultat inom rehabilitering.
+              </h2>
+              <p>
+                Vi utgår från varje individ och tar hand om de fysiska, psykiska
+                och sociala behoven. Varje rehabiliteringsprogram är utformat
+                med dina resurser, behov och önskemål i åtanke. Ledningen har
+                egen erfarenhet av att leva med diagnos/funktionsnedsättning och
+                relation.
+              </p>
 
-                  <label for="name">Namn</label>
-                  <input type="text" id="name" name="name" required />
+              <p>
+                Vi erbjuder olika rehabiliteringsprogram men också rekreation i
+                en härlig miljö. Läs mer om programmen och/eller kontakta oss om
+                du har några frågor eller om du är osäker på om det finns ett
+                program som passar just dig.
+              </p>
+            </section>
 
-                  <label for="email">E-postadress</label>
-                  <input type="email" id="email" name="email" required />
-
-                  <label for="phone">Telefonnummer</label>
-                  <input type="tel" id="phone" name="phone" required />
-
-                  <label for="subject">Välj ett ämne</label>
-                  <select id="subject" name="subject" required>
-                    <option value="finance">Finansiering</option>
-                    <option value="counseling">Rådgivning</option>
-                    <option value="insurance">Försäkringskassan</option>
-                    <option value="cancerrehab">Cancerrehab</option>
-                    <option value="neurorehab">Neurorehab</option>
-                    <option value="reumarehab">Reumarehab</option>
-                    <option value="stressrehab">Stressrehab</option>
-                    <option value="relativesprogram">Närståendeprogram</option>
-                    <option value="other">Övrigt</option>
-                  </select>
-
-                  <label for="message">Meddelande</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    required
-                  ></textarea>
-
-                  <div class="checkbox-container">
-                    <div class="checkbox-gdpr">
-                      <input type="checkbox" id="gdpr" name="gdpr" required />
-                      <label for="gdpr"
-                        >Godkännande om samtycke enligt lagen för GDPR</label
-                      >
-                    </div>
-
-                    <div class="checkbox-call">
-                      <input type="checkbox" id="call" name="call" />
-                      <label for="call">Jag vill helst bli uppringd</label>
-                    </div>
-
-                    <div class="checkbox-email">
-                      <input
-                        type="checkbox"
-                        id="emailContact"
-                        name="emailContact"
-                      />
-                      <label for="emailContact"
-                        >Jag vill bli kontaktad via e-post</label
-                      >
-                    </div>
-                  </div>
-
-                  <p class="contact-welcome">
-                    Du är alltid välkommen att kontakta oss.
-                  </p>
-                  <p class="contact-info">
-                    Dina uppgifter hanteras enligt vår Integritetspolicy och
-                    samtycke enligt GDPR när du sänder information till oss.
-                  </p>
-
-                  <button type="submit" class="submit-btn">Skicka</button>
-                </form>
-              </div>
-              <div class="details-container">
-                <div class="mailarea">
-                  <a href="mailto:info@cercadeti.se"
-                    ><i class="fas fa-envelope"></i> info@cercadeti.se</a
-                  >
-                </div>
-                <div class="phonearea">
-                  <span class="telephone"
-                    ><a href="tel:+468287638">+46 8 287 638</a></span
-                  >
-                  <span class="telephone"
-                    ><a href="tel:+34965837456">+34 965 837 456</a></span
-                  >
-                </div>
-                <div class="addresses-container">
-                  <div class="contact-address-se">
-                    <address class="contact-address">
-                      <h5>Sverige:</h5>
-                      <strong
-                        ><span class="address-company-name"
-                          >CercaDeTi Rehab AB</span
-                        ></strong
-                      ><br />
-                      <span class="address-location">Kivra: 559006-3722</span
-                      ><br />
-                      <span class="address-city">106 31 Stockholm,</span><br />
-                      <span class="address-country"
-                        ><strong>Sverige</strong><br
-                      /></span>
-                      <br />
-                    </address>
-                    <div class="map-container">
-                      <iframe
-                        title="Stockholm Location Map"
-                        loading="lazy-iframe"
-                        allowfullscreen
-                        src="https://www.google.com/maps?q=106+31+Stockholm,Sverige&output=embed"
-                      >
-                      </iframe>
-                    </div>
-                  </div>
-
-                  <div class="contact-address-es">
-                    <address class="contact-address">
-                      <h5>Spanien:</h5>
-                      <strong
-                        ><span class="address-company-name"
-                          >CercaDeTi Rehab AB</span
-                        > </strong
-                      ><br />
-                      <span class="address-location"
-                        >Locale 10, Centro Commercial Perlamar</span
-                      ><br />
-                      <span class="address-street">Av. Gabriel Miró, 44</span
-                      ><br />
-                      <span class="address-city"
-                        >03710 Calpe, Alicante<br
-                      /></span>
-                      <span class="address-country"
-                        ><strong>Spain</strong><br
-                      /></span>
-                      <br />
-                    </address>
-                    <div class="map-container">
-                      <iframe
-                        title="Calpe Location Map"
-                        loading="lazy-iframe"
-                        allowfullscreen
-                        src="https://www.google.com/maps?q=Av.+Gabriel+Mir%C3%B3+44,03710+Calpe,Alicante,Spain&output=embed"
-                      >
-                      </iframe>
-                    </div>
-                  </div>
+            <div class="banner-rehabprogram" id="banner-rehabprogram">
+              <!-- Background layers -->
+              <div class="image1"></div>
+              <div class="image2"></div>
+              <div class="image3"></div>
+              <div class="image4"></div>
+              <div class="image5"></div>
+              <div class="image6"></div>
+              <!-- Banner Content -->
+              <div class="banner-content-rehabprogram">
+                <div class="ctas-container">
+                  <a href="#main" class="button-CTA">Program</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="wide-image-kontakt" id="wide-image-kontakt"></div>
-        </section>
+
+          <!-- <section class="programs-list">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
+            dolorum facilis voluptate sit, et nostrum accusantium aut earum
+            explicabo vitae! Similique excepturi a explicabo officiis. Deleniti
+            dolor delectus nobis dolore. Aspernatur magnam hic rem mollitia
+            porro corrupti quia repellendus fugit laborum nemo exercitationem
+            tenetur maiores ipsa autem iure dolorem vero suscipit quibusdam,
+            dolor aliquam error ad neque. Molestias, quae! Nemo? Veritatis modi
+            quidem est quos? Dolorem ab libero unde ex natus minima laboriosam
+            voluptates, nemo dignissimos, voluptatibus consequatur magni.
+            Deserunt nihil rem molestias illum voluptatem in doloribus vel
+            voluptatibus deleniti. Dolores, qui aut odio, mollitia culpa
+            doloremque repellat tempora repellendus, excepturi unde quisquam.
+            Alias quos, labore doloremque doloribus laboriosam aspernatur quo
+            suscipit explicabo sequi quibusdam, eveniet, voluptatibus
+            accusantium recusandae modi! A, voluptatum sequi explicabo incidunt
+            perspiciatis quod non repellendus distinctio aliquid ab sunt vel
+            dignissimos earum impedit minus voluptate, dolorem iusto labore
+            officia eos perferendis corrupti dolorum fugiat. Sapiente,
+            veritatis. Fuga optio quas obcaecati cum ab eligendi odio eum maxime
+            nam doloremque fugiat corrupti soluta dolores qui non sunt
+            praesentium, voluptates placeat error nemo voluptatem quaerat
+            provident! Totam, aliquid consectetur. Adipisci delectus praesentium
+            aliquid, eligendi, inventore nesciunt explicabo, ratione
+            reprehenderit enim a commodi nobis sint atque? Vel, inventore. Vel
+            veniam aut temporibus earum cum provident vitae ipsum sed incidunt
+            ducimus? Fuga saepe est quo! Fugiat consectetur quas tempora eum id,
+            sit odit nobis nihil non commodi illo rerum doloribus consequatur
+            repellat dolore vitae voluptas sint saepe pariatur. Voluptates,
+            eaque illo. Reprehenderit quod ea laboriosam eaque unde! Hic
+            doloribus voluptatem adipisci earum incidunt sunt dolorem
+            praesentium non ullam quisquam, iure quod reprehenderit recusandae
+            iusto dolor autem consequatur ducimus dolorum molestiae porro.
+            Labore in voluptatum quas consequuntur eos mollitia rerum. Doloribus
+            veniam reprehenderit consectetur eius molestias sint asperiores
+            commodi fugiat aperiam beatae! Id animi sed reiciendis cum
+            blanditiis? Nihil sit dolores praesentium.
+          </section> -->
+        </div>
       </main>
       <!-- MAIN END -->
 
