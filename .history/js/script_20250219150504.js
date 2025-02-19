@@ -176,11 +176,11 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   if (imageElementRehabteam) {
     const imagesRehabteam = [
+      "images/rehabteam1.jpg",
       "images/staff-with-client.jpg",
-      "images/robbin-fysio.jpg",
-      "images/rehab5.jpg",
-      "images/evelyn.jpg",
-      "images/individual-training15.jpg",
+      "images/rehabteam3.jpg",
+      "images/rehabteam4.jpg",
+      "images/rehabteam5.jpg",
     ];
 
     let currentIndexRehabteam = 0;

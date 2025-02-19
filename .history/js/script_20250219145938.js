@@ -125,11 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
   changeImages();
   applyZoomEffect();
 
-  // Image Slider Functionality
-  // Image Slider for bakgrund.html
-  const imageElementBakgrund = document.getElementById("image-slider-bakgrund");
-  if (imageElementBakgrund) {
-    const imagesBakgrund = [
+  // Image Slider Functionality for omoss.html
+  const imageElement = document.getElementById("image-slider-bakgrund");
+  if (imageElement) {
+    const images = [
       "images/local.jpg",
       "images/local2.jpg",
       "images/local3.jpg",
@@ -143,73 +142,64 @@ document.addEventListener("DOMContentLoaded", function () {
       "images/gym7.jpg",
     ];
 
-    let currentIndexBakgrund = 0;
-    imageElementBakgrund.style.transition = "opacity 0.5s ease-in-out"; // Apply transition once
+    let currentIndex = 0;
+    imageElement.style.transition = "opacity 0.5s ease-in-out"; // Apply transition once
 
-    function changeImageBakgrund() {
-      currentIndexBakgrund = (currentIndexBakgrund + 1) % imagesBakgrund.length;
+    function changeImage() {
+      currentIndex = (currentIndex + 1) % images.length;
 
       // Set up the dissolve out effect
-      imageElementBakgrund.style.transition = "opacity 1.5s ease"; // Slow dissolve effect
-      imageElementBakgrund.style.opacity = 0; // Dissolve out the current image
+      imageElement.style.transition = "opacity 1.5s ease"; // Slow dissolve effect
+      imageElement.style.opacity = 0; // Dissolve out the current image
 
       setTimeout(() => {
-        imageElementBakgrund.src = imagesBakgrund[currentIndexBakgrund]; // Change the image source
-        imageElementBakgrund.alt = generateAltText(
-          imagesBakgrund[currentIndexBakgrund]
-        ); // Optional: update alt text
+        imageElement.src = images[currentIndex]; // Change the image source
+        imageElement.alt = generateAltText(images[currentIndex]); // Optional: update alt text
 
         // After the dissolve out, dissolve in the new image
-        imageElementBakgrund.style.opacity = 1; // Dissolve in the new image
+        imageElement.style.opacity = 1; // Dissolve in the new image
       }, 1500); // Delay to match the dissolve out time (1.5s)
     }
 
     // Change image every 6 seconds for smoother transitions
-    setInterval(changeImageBakgrund, 5000); // Image change interval
+    setInterval(changeImage, 5000); // Image change interval
   } else {
     console.error("Image slider element not found!");
   }
+});
 
-  // Image Slider for rehabteam.html
-  const imageElementRehabteam = document.getElementById(
-    "image-slider-rehabteam"
+// Script for the banner slideshow in rehabprogram.html
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(
+    ".banner-rehabprogram > div:not(.banner-content-rehabprogram)"
   );
-  if (imageElementRehabteam) {
-    const imagesRehabteam = [
-      "images/staff-with-client.jpg",
-      "images/robbin-fysio.jpg",
-      "images/rehab5.jpg",
-      "images/evelyn.jpg",
-      "images/individual-training15.jpg",
-    ];
+  let index = 0;
 
-    let currentIndexRehabteam = 0;
-    imageElementRehabteam.style.transition = "opacity 0.5s ease-in-out"; // Apply transition once
+  function changeSlide() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
 
-    function changeImageRehabteam() {
-      currentIndexRehabteam =
-        (currentIndexRehabteam + 1) % imagesRehabteam.length;
-
-      // Set up the dissolve out effect
-      imageElementRehabteam.style.transition = "opacity 1.5s ease"; // Slow dissolve effect
-      imageElementRehabteam.style.opacity = 0; // Dissolve out the current image
-
-      setTimeout(() => {
-        imageElementRehabteam.src = imagesRehabteam[currentIndexRehabteam]; // Change the image source
-        imageElementRehabteam.alt = generateAltText(
-          imagesRehabteam[currentIndexRehabteam]
-        ); // Optional: update alt text
-
-        // After the dissolve out, dissolve in the new image
-        imageElementRehabteam.style.opacity = 1; // Dissolve in the new image
-      }, 1500); // Delay to match the dissolve out time (1.5s)
-    }
-
-    // Change image every 6 seconds for smoother transitions
-    setInterval(changeImageRehabteam, 5000); // Image change interval
-  } else {
-    console.error("Image slider element not found!");
+    index = (index + 1) % slides.length;
   }
+
+  // Lazy load images
+  slides.forEach((slide) => {
+    const img = slide.querySelector("img");
+    if (img) {
+      img.setAttribute("loading", "lazy");
+    }
+  });
+
+  // Initial activation
+  slides[0].classList.add("active");
+
+  // Immediately trigger the first change to avoid delay
+  setTimeout(changeSlide, 200); // Short timeout to ensure DOM is ready
+
+  // Change background every 3seconds
+  setInterval(changeSlide, 3000);
 });
 
 // Script for saving the selected period in aktuellt dates and giving it as the default value to the register-form

@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
   applyZoomEffect();
 
   // Image Slider Functionality
-  // Image Slider for bakgrund.html
+  // Image Slider Functionality for bakgrund.html
   const imageElementBakgrund = document.getElementById("image-slider-bakgrund");
   if (imageElementBakgrund) {
     const imagesBakgrund = [
@@ -170,17 +170,17 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Image slider element not found!");
   }
 
-  // Image Slider for rehabteam.html
+  // Image Slider Functionality for rehabteam.html
   const imageElementRehabteam = document.getElementById(
     "image-slider-rehabteam"
   );
   if (imageElementRehabteam) {
     const imagesRehabteam = [
-      "images/staff-with-client.jpg",
-      "images/robbin-fysio.jpg",
-      "images/rehab5.jpg",
-      "images/evelyn.jpg",
-      "images/individual-training15.jpg",
+      "images/rehabteam1.jpg",
+      "images/rehabteam2.jpg",
+      "images/rehabteam3.jpg",
+      "images/rehabteam4.jpg",
+      "images/rehabteam5.jpg",
     ];
 
     let currentIndexRehabteam = 0;

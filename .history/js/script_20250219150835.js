@@ -178,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imagesRehabteam = [
       "images/staff-with-client.jpg",
       "images/robbin-fysio.jpg",
+      "images/Evelyn-rob.jpg",
       "images/rehab5.jpg",
       "images/evelyn.jpg",
       "images/individual-training15.jpg",
