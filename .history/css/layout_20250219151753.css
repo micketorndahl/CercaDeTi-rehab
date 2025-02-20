@@ -255,9 +255,7 @@ h1.cercadeti {
 
 #banner-rehabteam {
   background-image: url(../images/staff-with-client.jpg);
-  background-position: top;
-  background-size: cover;
-  background-attachment: scroll;
+  background-position: center center;
   animation: none;
 }
 

@@ -387,29 +387,29 @@ address h5 {
 }
 
 /* Background Images */
-.banner-rehabprogram .image1-rehabprogram {
-  background-image: url(../images/individual-training21.jpg);
+.banner-rehabprogram .image1 {
+  background-image: url(/images/individual-training21.jpg);
 }
-.banner-rehabprogram .image2-rehabprogram {
-  background-image: url(../images/individual-training53.jpg);
+.banner-rehabprogram .image2 {
+  background-image: url(/images/individual-training53.jpg);
 }
-.banner-rehabprogram .image3-rehabprogram {
-  background-image: url(../images/individual-training8.jpg);
+.banner-rehabprogram .image3 {
+  background-image: url(/images/individual-training8.jpg);
 }
-.banner-rehabprogram .image4-rehabprogram {
-  background-image: url(../images/walking-rehab.jpg);
+.banner-rehabprogram .image4 {
+  background-image: url(/images/walking-rehab.jpg);
 }
-.banner-rehabprogram .image5-rehabprogram {
-  background-image: url(../images/individual-training34.jpg);
+.banner-rehabprogram .image5 {
+  background-image: url(/images/individual-training34.jpg);
 }
-.banner-rehabprogram .image6-rehabprogram {
-  background-image: url(../images/pool-rehab.jpg);
+.banner-rehabprogram .image6 {
+  background-image: url(/images/pool-rehab.jpg);
 }
 
 /* Preload Images */
 @media (min-width: 1px) {
   .preload-images {
-    background-image: url(../images/individual-training21.jpg),
+    background-image: url(/images/individual-training21.jpg),
       url(../images/individual-training53.jpg),
       url(../images/individual-training8.jpg), url(../images/walking-rehab.jpg),
       url(../images/individual-training34.jpg), url(../images/pool-rehab.jpg);

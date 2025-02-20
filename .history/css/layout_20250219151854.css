@@ -257,7 +257,7 @@ h1.cercadeti {
   background-image: url(../images/staff-with-client.jpg);
   background-position: top;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   animation: none;
 }
 

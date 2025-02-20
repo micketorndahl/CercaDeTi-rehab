@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Scroll Button Functionality
+  const scrollButton = document.getElementById("scroll-button");
+  if (scrollButton) {
+    scrollButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      const headerOffset = 80; // Adjust this value based on your design
+      const element = document.querySelector("#content");
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    });
+  } else {
+    console.error("Scroll button not found!");
+  }
+
   // Gallery Slideshow Functionality
   const images = document.querySelectorAll(".image-box img");
   let imageList = [];
@@ -253,30 +273,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-// Rotating Banner Functionality for Rehabprogram Page
-const bannerContainer = document.getElementById("banner-rehabprogram");
-if (bannerContainer) {
-  const banners = bannerContainer.querySelectorAll("div");
-  let currentIndex = 0;
-
-  // Function to rotate banners
-  function rotateBanners() {
-    // Remove active class from the current banner
-    banners[currentIndex].classList.remove("active");
-
-    // Move to the next banner (loop back to the first if necessary)
-    currentIndex = (currentIndex + 1) % banners.length;
-
-    // Add active class to the new banner
-    banners[currentIndex].classList.add("active");
-  }
-
-  // Set initial active banner
-  banners[currentIndex].classList.add("active");
-
-  // Rotate banners every 5 seconds
-  setInterval(rotateBanners, 5000);
-} else {
-  console.error("Banner container not found!");
-}

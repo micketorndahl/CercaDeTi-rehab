@@ -387,22 +387,22 @@ address h5 {
 }
 
 /* Background Images */
-.banner-rehabprogram .image1-rehabprogram {
-  background-image: url(../images/individual-training21.jpg);
+.banner-rehabprogram .image1 {
+  background-image: url(/images/individual-training21.jpg);
 }
-.banner-rehabprogram .image2-rehabprogram {
-  background-image: url(../images/individual-training53.jpg);
+.banner-rehabprogram .image2 {
+  background-image: url(/images/individual-training53.jpg);
 }
-.banner-rehabprogram .image3-rehabprogram {
-  background-image: url(../images/individual-training8.jpg);
+.banner-rehabprogram .image3 {
+  background-image: url(/images/individual-training8.jpg);
 }
-.banner-rehabprogram .image4-rehabprogram {
-  background-image: url(../images/walking-rehab.jpg);
+.banner-rehabprogram .image4 {
+  background-image: url(/images/walking-rehab.jpg);
 }
-.banner-rehabprogram .image5-rehabprogram {
+.banner-rehabprogram .image5 {
   background-image: url(../images/individual-training34.jpg);
 }
-.banner-rehabprogram .image6-rehabprogram {
+.banner-rehabprogram .image6 {
   background-image: url(../images/pool-rehab.jpg);
 }
 

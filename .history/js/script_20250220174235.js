@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
   // Gallery Slideshow Functionality
   const images = document.querySelectorAll(".image-box img");
   let imageList = [];

@@ -1,4 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Scroll Button Functionality
+//   const scrollButton = document.getElementById("scroll-button");
+//   if (scrollButton) {
+//     scrollButton.addEventListener("click", function (event) {
+//       event.preventDefault();
+//       const headerOffset = 80; // Adjust this value based on your design
+//       const element = document.querySelector("#content");
+//       const elementPosition =
+//         element.getBoundingClientRect().top + window.scrollY;
+//       const offsetPosition = elementPosition - headerOffset;
+
+//       window.scrollTo({
+//         top: offsetPosition,
+//         behavior: "smooth",
+//       });
+//     });
+//   } else {
+//     console.error("Scroll button not found!");
+//   }
+
   // Gallery Slideshow Functionality
   const images = document.querySelectorAll(".image-box img");
   let imageList = [];
