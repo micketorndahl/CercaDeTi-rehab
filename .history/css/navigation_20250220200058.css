@@ -137,26 +137,14 @@ nav.main-nav ul li a.active::after {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
+  bottom: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
   pointer-events: auto; /* Make it interactive */
   visibility: hidden; /* Hide by default */
 }
 
 .dropdown:hover::after {
   visibility: visible;
-}
-
-.dropdown-menu::before {
-  content: "";
-  position: absolute;
-  top: -8px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-8px); /* Adjust based on width */
-  width: 1rem; /* Adjust as needed */
-  height: 1rem; /* Adjust as needed */
-  background: inherit; /* Inherit the background color */
-  border-radius: 8px 8px 0 0; /* Changed to top radius */
 }
 
 .dropdown-toggle {
@@ -190,7 +178,7 @@ nav.main-nav ul li a.active::after {
   left: 0;
   background: var(--color-primary);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0 0 5px 5px;
+  border-radius: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
   visibility: hidden;

@@ -153,8 +153,8 @@ nav.main-nav ul li a.active::after {
   top: -8px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-8px); /* Adjust based on width */
-  width: 1rem; /* Adjust as needed */
-  height: 1rem; /* Adjust as needed */
+  width: 16px; /* Adjust as needed */
+  height: 8px; /* Adjust as needed */
   background: inherit; /* Inherit the background color */
   border-radius: 8px 8px 0 0; /* Changed to top radius */
 }

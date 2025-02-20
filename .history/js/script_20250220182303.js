@@ -281,61 +281,18 @@ if (bannerContainer) {
   console.error("Banner container not found!");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.querySelector(".dropdown");
   const dropdownMenu = document.querySelector(".dropdown-menu");
   const header = document.querySelector(".header");
-  const dropdownLi = document.querySelector(".dropdown"); // Select the <li>
 
-  if (dropdownMenu && header && dropdownLi) {
-    const headerHeight = header.offsetHeight;
-    dropdownMenu.style.top = headerHeight + "px";
+  const updateDropdownPosition = () => {
+    const headerRect = header.getBoundingClientRect(); // Get header position
+    const dropdownRect = dropdown.getBoundingClientRect(); // Get dropdown position
+    dropdownMenu.style.top = `${headerRect.bottom - dropdownRect.top}px`; // Align to header's bottom
+  };
 
-    // Calculate the center of the <li>
-    const liRect = dropdownLi.getBoundingClientRect();
-    const liCenterX = liRect.left + liRect.width / 2;
-
-    // Calculate the left position to center the dropdown
-    const menuWidth = dropdownMenu.offsetWidth;
-    const menuLeft = liCenterX - menuWidth / 2;
-
-    dropdownMenu.style.left = menuLeft + "px";
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-  const header = document.querySelector(".header");
-  const dropdownLi = document.querySelector(".dropdown");
-
-  if (dropdownMenu && header && dropdownLi) {
-    const headerHeight = header.offsetHeight;
-    dropdownMenu.style.top = headerHeight + "px";
-
-    const liRect = dropdownLi.getBoundingClientRect();
-    const liCenterX = liRect.left + liRect.width / 2;
-
-    const menuWidth = dropdownMenu.offsetWidth;
-    const menuLeft = liCenterX - menuWidth / 2;
-
-    dropdownMenu.style.left = menuLeft + "px";
-  }
-});
-
-window.addEventListener("resize", function () {
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-  const header = document.querySelector(".header");
-  const dropdownLi = document.querySelector(".dropdown");
-
-  if (dropdownMenu && header && dropdownLi) {
-    const headerHeight = header.offsetHeight;
-    dropdownMenu.style.top = headerHeight + "px";
-
-    const liRect = dropdownLi.getBoundingClientRect();
-    const liCenterX = liRect.left + liRect.width / 2;
-
-    const menuWidth = dropdownMenu.offsetWidth;
-    const menuLeft = liCenterX - menuWidth / 2;
-
-    dropdownMenu.style.left = menuLeft + "px";
-  }
+  // Update on load and resize
+  updateDropdownPosition();
+  window.addEventListener("resize", updateDropdownPosition);
 });

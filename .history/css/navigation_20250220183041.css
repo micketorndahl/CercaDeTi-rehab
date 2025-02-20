@@ -132,37 +132,11 @@ nav.main-nav ul li a.active::after {
   display: inline-block; /* To prevent stretching */
 }
 
-.dropdown::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  pointer-events: auto; /* Make it interactive */
-  visibility: hidden; /* Hide by default */
-}
-
-.dropdown:hover::after {
-  visibility: visible;
-}
-
-.dropdown-menu::before {
-  content: "";
-  position: absolute;
-  top: -8px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-8px); /* Adjust based on width */
-  width: 1rem; /* Adjust as needed */
-  height: 1rem; /* Adjust as needed */
-  background: inherit; /* Inherit the background color */
-  border-radius: 8px 8px 0 0; /* Changed to top radius */
-}
-
 .dropdown-toggle {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  margin-top: 4rem;
 }
 
 .dropdown-toggle .arrow-icon {
@@ -181,24 +155,21 @@ nav.main-nav ul li a.active::after {
 
 /* The dropdown menu */
 .dropdown-menu {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: auto;
-  left: 0;
+  top: 100%;
+  right: -50%; /* Position from the center of the parent */
   background: var(--color-primary);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0 0 5px 5px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 999;
-  transform: translateY(
-    -10px
-  ); /* Add a small initial translateY for animation */
 }
 
 .dropdown:hover .dropdown-menu {

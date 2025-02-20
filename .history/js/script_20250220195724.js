@@ -302,25 +302,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-  const header = document.querySelector(".header");
-  const dropdownLi = document.querySelector(".dropdown");
-
-  if (dropdownMenu && header && dropdownLi) {
-    const headerHeight = header.offsetHeight;
-    dropdownMenu.style.top = headerHeight + "px";
-
-    const liRect = dropdownLi.getBoundingClientRect();
-    const liCenterX = liRect.left + liRect.width / 2;
-
-    const menuWidth = dropdownMenu.offsetWidth;
-    const menuLeft = liCenterX - menuWidth / 2;
-
-    dropdownMenu.style.left = menuLeft + "px";
-  }
-});
-
 window.addEventListener("resize", function () {
   const dropdownMenu = document.querySelector(".dropdown-menu");
   const header = document.querySelector(".header");

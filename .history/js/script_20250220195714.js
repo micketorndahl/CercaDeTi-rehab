@@ -304,16 +304,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownMenu = document.querySelector(".dropdown-menu");
-  const header = document.querySelector(".header");
   const dropdownLi = document.querySelector(".dropdown");
 
-  if (dropdownMenu && header && dropdownLi) {
-    const headerHeight = header.offsetHeight;
-    dropdownMenu.style.top = headerHeight + "px";
-
+  if (dropdownMenu && dropdownLi) {
+    // Calculate the center of the <li>
     const liRect = dropdownLi.getBoundingClientRect();
     const liCenterX = liRect.left + liRect.width / 2;
 
+    // Calculate the left position to center the dropdown
     const menuWidth = dropdownMenu.offsetWidth;
     const menuLeft = liCenterX - menuWidth / 2;
 
@@ -323,13 +321,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("resize", function () {
   const dropdownMenu = document.querySelector(".dropdown-menu");
-  const header = document.querySelector(".header");
   const dropdownLi = document.querySelector(".dropdown");
 
-  if (dropdownMenu && header && dropdownLi) {
-    const headerHeight = header.offsetHeight;
-    dropdownMenu.style.top = headerHeight + "px";
-
+  if (dropdownMenu && dropdownLi) {
     const liRect = dropdownLi.getBoundingClientRect();
     const liCenterX = liRect.left + liRect.width / 2;
 
