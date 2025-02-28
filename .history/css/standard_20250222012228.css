@@ -1,0 +1,18 @@
+/*
+/* STANDARD
+*/
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 7rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+[class*="fa"]:not([class*="fab"]) {
+  display: block;
+  margin: 0 auto;
+  padding: 0.2rem;
+}
