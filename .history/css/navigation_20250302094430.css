@@ -1,0 +1,454 @@
+/* NAV */
+
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+nav.main-nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav ul li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+.main-nav a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+nav.main-nav ul li a {
+  font-family: var(--font-secondary), sans-serif;
+  font-size: clamp(1rem, 1.125vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--dullwhite);
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-container {
+  display: flex;
+}
+
+nav.main-nav ul li a:hover {
+  color: var(--white); /* Brighter on hover */
+}
+
+nav.main-nav ul li a.active {
+  color: var(--white); /* Brightest when active */
+}
+
+nav.main-nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px; /* Adjusted height here */
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover underline that grows from the left */
+nav.main-nav ul:not(.dropdown-menu) > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: width 0.6s ease, background-color 0.6s ease;
+  opacity: 0;
+}
+
+nav.main-nav ul:not(.dropdown-menu) > li > a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+nav.main-nav ul.dropdown-menu li a.active::after {
+  bottom: -1px; /* Adjust the gap as needed */
+}
+
+/* Active link styles */
+nav.main-nav ul li a.active::after {
+  width: 100%;
+  height: 1px; /* Adjusted height here */
+  opacity: 1;
+}
+
+.nav-links {
+  flex: 2;
+}
+
+.social-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.social ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  margin: 0 0.5rem;
+}
+
+.social ul > li > a {
+  margin: 0;
+  padding: 0;
+}
+
+.ctas-container {
+  display: flex; /* Aligns buttons side by side */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block; /* To prevent stretching */
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  pointer-events: auto; /* Make it interactive */
+  visibility: hidden; /* Hide by default */
+}
+
+.dropdown:hover::after {
+  visibility: visible;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-8px); /* Adjust based on width */
+  width: 1rem; /* Adjust as needed */
+  height: 8px; /* Adjust as needed */
+  background: inherit; /* Inherit the background color */
+  border-radius: 8px 8px 0 0; /* Changed to top radius */
+}
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-toggle .arrow-icon {
+  margin-left: 0.5rem;
+  border: solid var(--dullwhite);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 0.2rem;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .arrow-icon {
+  transform: rotate(-135deg); /* Rotate the arrow upwards */
+}
+
+/* The dropdown menu */
+.dropdown-menu {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: auto;
+  left: 0;
+  background: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+  transform: translateY(
+    -10px
+  ); /* Add a small initial translateY for animation */
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li:first-child {
+  padding-top: 0.5rem; /* Adjust the padding value as needed */
+}
+
+.dropdown-menu li:last-child {
+  padding-bottom: 0.5rem; /* Adjust the padding value as needed */
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--dullwhite);
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+/* Small animation on hover */
+.dropdown-menu li a:active {
+  transform: scale(0.98);
+}
+
+/* Hamburger Menu & Overlay */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: var(--dullwhite);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 117px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--color-primary);
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  height: calc(100vh - 85px); /* Adjust 85px to your header height */
+}
+
+.menu-overlay ul {
+  list-style: none;
+  padding: 1.25rem;
+  text-align: center;
+  margin: 0;
+}
+
+.menu-overlay ul li {
+  margin: 1.25rem 0;
+}
+
+.menu-overlay ul li a {
+  color: var(--dullwhite);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-overlay ul li a:hover {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem; /* Add padding to make the background wider */
+}
+
+.menu-overlay ul li a.active {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  padding: 0.5rem; /* Add padding to make the background wider */
+}
+
+.menu-overlay .dropdown-overlay ul li a:hover {
+  padding: 0;
+}
+
+.menu-overlay .dropdown-overlay ul li a.active {
+  padding: 0.2rem;
+}
+
+/* Overlay Dropdown Styles */
+.dropdown-overlay .dropdown-menu-overlay {
+  display: none;
+  list-style: none;
+  padding: 0;
+
+  max-height: 12.75rem; /* Adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background: rgba(0, 0, 0, 0.1); /* Optional: add a subtle background */
+}
+
+.dropdown-overlay.active .dropdown-menu-overlay {
+  display: block;
+}
+
+.dropdown-overlay .dropdown-menu-overlay li {
+  margin: 0.325rem 0;
+}
+
+.dropdown-overlay .dropdown-menu-overlay li a {
+  color: var(--dullwhite);
+  text-decoration: none;
+  font-size: 1rem;
+  display: block; /* Make links fill the li width */
+  padding: 0 0.7375rem; /* Add some padding */
+}
+
+.dropdown-toggle-overlay {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-toggle-overlay .arrow-icon {
+  margin-left: 0.5rem;
+  border: solid var(--dullwhite);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 0.2rem;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-overlay.active .arrow-icon {
+  transform: rotate(-135deg);
+}
+
+/* Custom Scrollbar Styles */
+.dropdown-overlay .dropdown-menu-overlay::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+.dropdown-overlay .dropdown-menu-overlay::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Track background */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+
+.dropdown-overlay .dropdown-menu-overlay::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    135deg,
+    var(--color-quaternary),
+    var(--color-tertiary)
+  ); /* Thumb color */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+
+.dropdown-overlay .dropdown-menu-overlay::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-tertiary),
+    var(--color-quaternary)
+  ); /* Hover effect */
+}
+
+@media (max-width: 768px) {
+  .header > div {
+    flex: none;
+  }
+
+  .main-nav .nav-container {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto; /* Push hamburger to the right */
+    margin-right: 2rem; /* Match header padding */
+  }
+
+  .nav-button-container,
+  .social-container,
+  .dates-index {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-and-text {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .logo img {
+    padding-left: 0;
+  }
+
+  header .dates-index {
+    display: none;
+  }
+}
