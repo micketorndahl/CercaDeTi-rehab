@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  h2 {
-    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
-  }
-}
