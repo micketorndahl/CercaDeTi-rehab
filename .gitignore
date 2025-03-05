@@ -1,0 +1,16 @@
+# Ignore local history folder
+.history/
+
+# Ignore system files
+.DS_Store  # macOS system file
+Thumbs.db  # Windows system file
+
+# Ignore Node.js dependencies (if you ever use npm)
+node_modules/
+
+# Ignore build/output directories (if using a bundler like Webpack)
+dist/
+build/
+
+# Ignore environment files (if storing API keys)
+.env

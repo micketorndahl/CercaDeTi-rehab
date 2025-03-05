@@ -5,15 +5,13 @@
   justify-content: space-around;
   align-items: center;
   padding: 0;
-  flex-grow: 0;
-  flex-shrink: 0;
 }
 
 nav.main-nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 0;
 }
 
 nav.main-nav ul li {
@@ -27,20 +25,18 @@ nav.main-nav ul li {
   padding: 0.5rem;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+  width: 100%; /* Make links fill the width of their container */
 }
 
 nav.main-nav ul li a {
   font-family: var(--font-secondary), sans-serif;
-  font-size: clamp(1rem, 1.125vw, 1.125rem);
+  font-size: clamp(1.025rem, 1vw, 1.125rem); /* Adjusted for responsiveness */
   font-weight: 400;
   line-height: 1rem;
   color: var(--dullwhite);
   text-decoration: none;
   transition: all 0.4s ease-in-out;
-}
-
-.nav-container {
-  display: flex;
+  text-align: center; /* Center text for better responsiveness */
 }
 
 nav.main-nav ul li a:hover {
@@ -55,7 +51,7 @@ nav.main-nav ul li a.active::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -4px;
   width: 100%;
   height: 1px; /* Adjusted height here */
   background-color: var(--white);
@@ -68,7 +64,7 @@ nav.main-nav ul:not(.dropdown-menu) > li > a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -4px;
   width: 0;
   height: 1px;
   background-color: var(--white);
@@ -93,8 +89,25 @@ nav.main-nav ul li a.active::after {
   opacity: 1;
 }
 
-.nav-links {
-  flex: 2;
+.nav-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container ul li {
+  list-style: none;
+  margin: 0.5rem;
 }
 
 .social-container {
@@ -103,6 +116,18 @@ nav.main-nav ul li a.active::after {
   padding: 0;
   margin: 0;
   align-items: center;
+}
+
+@media (max-width: 1410px) {
+  .social-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-container {
+    display: none;
+  }
 }
 
 .social ul {
@@ -126,38 +151,45 @@ nav.main-nav ul li a.active::after {
   align-items: center;
 }
 
-/* Style for dropdown menu */
+@media (max-width: 768px) {
+  .main-nav a {
+    padding: 0.25rem; /* Reduce padding for smaller screens */
+  }
+
+  nav.main-nav ul li {
+    margin: 0 0.5rem; /* Reduce margin for smaller screens */
+  }
+
+  .social ul > li > a {
+    padding: 0.25rem; /* Reduce padding for smaller screens */
+  }
+
+  .ctas-container {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .ctas-container > * {
+    margin: 0.25rem 0; /* Reduce margin for buttons */
+  }
+}
+
+//* Style for dropdown menu */
 .dropdown {
   position: relative;
-  display: inline-block; /* To prevent stretching */
+  z-index: 1010;
 }
 
-.dropdown::after {
+/* Invisible bridge to keep the dropdown open */
+/* .dropdown::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  pointer-events: auto; /* Make it interactive */
-  visibility: hidden; /* Hide by default */
-}
-
-.dropdown:hover::after {
-  visibility: visible;
-}
-
-.dropdown-menu::before {
-  content: "";
-  position: absolute;
-  top: -8px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-8px); /* Adjust based on width */
-  width: 1rem; /* Adjust as needed */
-  height: 8px; /* Adjust as needed */
-  background: inherit; /* Inherit the background color */
-  border-radius: 8px 8px 0 0; /* Changed to top radius */
-}
+  top: 60%;
+  left: 60%;
+  width: 12%;
+  height: 47px;
+  background: red;
+  pointer-events: auto;
+} */
 
 .dropdown-toggle {
   display: inline-flex;
@@ -165,10 +197,73 @@ nav.main-nav ul li a.active::after {
   cursor: pointer;
 }
 
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-8px);
+  width: 1rem;
+  height: 8px;
+  background: inherit;
+  border-radius: 8px 8px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-inline: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* The invisible bridge to prevent flickering */
+.dropdown-menu::after {
+  content: "";
+  position: absolute;
+  top: -66px; /* Make sure it overlaps with the dropdown trigger */
+  left: 50%; /* Start from the center */
+  transform: translateX(-50%); /* Center it horizontally */
+  width: 8rem;
+  height: 70px; /* This is the invisible hover bridge */
+  background: transparent;
+  pointer-events: auto;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li:first-child {
+  padding-top: 0.5rem;
+}
+
+.dropdown-menu li:last-child {
+  padding-bottom: 0.5rem;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  padding: 0.5rem 1rem;
+  color: var(--dullwhite);
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+
+.dropdown-menu li a:active {
+  transform: scale(0.98);
+}
+
 .dropdown-toggle .arrow-icon {
   margin-left: 0.5rem;
   border: solid var(--dullwhite);
-  border-width: 0 2px 2px 0;
+  border-width: 0 1px 1.5px 0;
   display: inline-block;
   padding: 0.2rem;
   transform: rotate(45deg);
@@ -176,18 +271,17 @@ nav.main-nav ul li a.active::after {
 }
 
 .dropdown:hover .arrow-icon {
-  transform: rotate(-135deg); /* Rotate the arrow upwards */
+  transform: rotate(-135deg);
 }
 
 /* The dropdown menu */
 .dropdown-menu {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: auto;
-  left: 0;
+  top: 100%;
   background: var(--color-primary);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0 0 5px 5px;
@@ -195,12 +289,19 @@ nav.main-nav ul li a.active::after {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 999;
-  transform: translateY(
-    -10px
-  ); /* Add a small initial translateY for animation */
+  z-index: 1001;
+  pointer-events: none; /* Disable pointer events */
+  min-width: 220px; /* Ensure it has a width */
 }
 
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto; /* enable pointer events when menu is visible */
+}
+
+/* The dropdown hover state */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -209,6 +310,12 @@ nav.main-nav ul li a.active::after {
 
 .dropdown-menu li {
   list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle line */
+  padding: 0;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none; /* Remove border from the last item */
 }
 
 .dropdown-menu li:first-child {
@@ -220,7 +327,7 @@ nav.main-nav ul li a.active::after {
 }
 
 .dropdown-menu li a {
-  display: block;
+  display: flex;
   padding: 0.5rem 1rem;
   color: var(--dullwhite);
   text-decoration: none;
@@ -229,7 +336,7 @@ nav.main-nav ul li a.active::after {
 }
 
 .dropdown-menu li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   color: var(--white);
 }
 
@@ -238,32 +345,61 @@ nav.main-nav ul li a.active::after {
   transform: scale(0.98);
 }
 
+.card-index h3 {
+  display: flex;
+  align-items: center; /* Align items vertically center */
+  justify-content: center; /* Center items horizontally */
+  position: relative; /* Ensure relative positioning */
+  line-height: 1;
+}
+
+.card-index h3 .arrow-icon {
+  margin-left: 0.8rem;
+  border: solid var(--dullwhite);
+  border-width: 0 2px 2px 0; /* Increased border width for a bigger arrow */
+  display: inline-block;
+  padding: 0.3rem; /* Increased padding for better visibility */
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+  align-self: center; /* Ensure the arrow icon is centered vertically */
+  position: static; /* Remove absolute positioning */
+}
+
+.card-index h3:hover .arrow-icon {
+  transform: rotate(-135deg); /* Rotate the arrow upwards */
+}
+
 /* Hamburger Menu & Overlay */
 
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 25px;
+  width: 2rem; /* Increased width */
+  height: 2rem; /* Increased height */
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 1001;
+  transition: transform 0.3s ease-in-out; /* Add transition for rotation */
 }
 
 .hamburger span {
-  width: 30px;
-  height: 3px;
+  width: 2rem; /* Increased width */
+  height: 0.2rem; /* Increased height */
   background: var(--dullwhite);
-  border-radius: 10px;
-  transition: all 0.3s linear;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
   position: relative;
-  transform-origin: 1px;
+  transform-origin: 10px; /* Adjusted for better rotation */
+}
+
+.hamburger.active {
+  transform: rotate(90deg); /* Rotate the entire hamburger menu */
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translate(5px, 5px); /* Adjusted for better alignment */
 }
 
 .hamburger.active span:nth-child(2) {
@@ -272,7 +408,7 @@ nav.main-nav ul li a.active::after {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(5px, -5px); /* Adjusted for better alignment */
 }
 
 .menu-overlay {
@@ -280,25 +416,36 @@ nav.main-nav ul li a.active::after {
   top: 117px;
   left: 0;
   width: 100%;
-  height: 0;
   background: var(--color-tertiary);
-  transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out, opacity 0.3s visibility 0.3s ease-in-out;
   z-index: 1000;
   overflow: hidden;
-  animation: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .menu-overlay.active {
+  display: flex;
+  align-items: center;
   height: calc(100vh - 117px);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .menu-overlay-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100% - 117px);
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   width: 100%;
+  opacity: 0;
+  height: calc(100vh - 117px);
+}
+
+.menu-overlay.active .menu-overlay-content {
+  opacity: 1;
 }
 
 .menu-overlay ul {
@@ -310,23 +457,25 @@ nav.main-nav ul li a.active::after {
 
 .menu-overlay ul li {
   margin: 0.5rem;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .menu-overlay ul li a {
   color: var(--dullwhite);
   text-decoration: none;
-  font-size: 1.5rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  font-size: 2.3rem;
+  transition: color 0.4s ease, background-color 0.4s ease;
   display: block; /* Make links fill width */
-  width: 100%; /* Make links full width */
   box-sizing: border-box; /* Include padding in width */
-  padding: 0.5rem 0; /* consistent padding */
+  padding: 0.5rem 1rem; /* consistent padding */
 }
 
 .menu-overlay ul li a:hover {
   color: var(--white);
   background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px; /* Subtle radius for modern look */
+  transition: background-color 0.5s ease, color 0.5s ease,
+    border-radius 0.5s ease; /* Smooth transition */
 }
 
 .menu-overlay ul li a.active {
@@ -340,34 +489,91 @@ nav.main-nav ul li a.active::after {
 }
 
 .menu-overlay .dropdown-overlay ul li a.active {
-  padding: 0.2rem;
+  padding: 0.1rem;
 }
 
 /* Overlay Dropdown Styles */
 .dropdown-overlay .dropdown-menu-overlay {
-  display: none;
+  visibility: hidden; /* Instead of display: none */
+  opacity: 0;
   list-style: none;
   padding: 0;
-  margin: 0.5rem 4rem;
-  max-height: 12.75rem; /* Adjust as needed */
-  overflow-y: auto; /* Enable vertical scrolling */
-  background: rgba(0, 0, 0, 0.1); /* Optional: add a subtle background */
+  margin: 1rem 3rem;
+  max-height: 0; /* Set max-height to 0 to collapse space */
+  overflow-y: hidden; /* Hide overflow */
+  background: rgba(0, 0, 0, 0.2); /* Slightly darker for contrast */
+  border-radius: 6px; /* Rounded edges for modern look */
+  backdrop-filter: blur(10px); /* Adds a slight blur effect */
+  transform: translateY(-15px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out,
+    max-height 0.5s ease-out, visibility 0s linear 0.5s;
 }
 
 .dropdown-overlay.active .dropdown-menu-overlay {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  max-height: 12.75rem; /* Set max-height to desired value when visible */
+  overflow-y: auto; /* Enable vertical scrolling */
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out,
+    max-height 0.5s ease-out;
 }
 
+/* When active (open), make it visible */
+.dropdown-overlay.active .dropdown-menu-overlay {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Animate individual list items */
 .dropdown-overlay .dropdown-menu-overlay li {
-  margin: 0.325rem 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Staggered effect for list items */
+.dropdown-overlay.active .dropdown-menu-overlay li {
+  opacity: 1;
+  transform: translateY(0);
+  margin: 0;
+  padding-block: 0.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle line between each li */
+}
+
+.dropdown-overlay.active .dropdown-menu-overlay li:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+/* Delay each item for a cascading effect */
+.dropdown-overlay.active .dropdown-menu-overlay li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.dropdown-overlay.active .dropdown-menu-overlay li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.dropdown-overlay.active .dropdown-menu-overlay li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.dropdown-overlay.active .dropdown-menu-overlay li:nth-child(4) {
+  transition-delay: 0.4s;
 }
 
 .dropdown-overlay .dropdown-menu-overlay li a {
   color: var(--dullwhite);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   display: block; /* Make links fill the li width */
-  padding: 0 0.7375rem; /* Add some padding */
+  padding: 0; /* Add some padding */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-overlay .dropdown-menu-overlay li a:hover {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px; /* Subtle radius for modern look */
 }
 
 .dropdown-toggle-overlay {
@@ -379,11 +585,13 @@ nav.main-nav ul li a.active::after {
 .dropdown-toggle-overlay .arrow-icon {
   margin-left: 0.5rem;
   border: solid var(--dullwhite);
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 0.2rem;
+  border-width: 0 3px 3px 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 0.3rem;
 }
 
 .dropdown-overlay.active .arrow-icon {
@@ -392,7 +600,7 @@ nav.main-nav ul li a.active::after {
 
 /* Custom Scrollbar Styles */
 .dropdown-overlay .dropdown-menu-overlay::-webkit-scrollbar {
-  width: 8px; /* Adjust width as needed */
+  width: 10px; /* Adjust width as needed */
 }
 
 .dropdown-overlay .dropdown-menu-overlay::-webkit-scrollbar-track {
@@ -419,7 +627,6 @@ nav.main-nav ul li a.active::after {
 
 @media (max-width: 768px) {
   .header > div {
-    flex: none;
   }
 
   .main-nav .nav-container {
@@ -446,7 +653,7 @@ nav.main-nav ul li a.active::after {
     display: none;
   }
 
-  header h1.cercadeti {
-    font-size: 2rem;
+  .logo-and-text-wrapper {
+    margin: 0 auto;
   }
 }
